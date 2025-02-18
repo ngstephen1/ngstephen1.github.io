@@ -14,7 +14,7 @@ export default {
           300: "#5F3AA1"   // vibrant neon-inflected purple
         },
         "accent-text": "#D8B7FF",  // soft lavender for text accents
-        "accent-color": "#FCE205", // search bar color
+        "accent-color": "#FEC20C", // search bar color
         "search-blue": "#29B6F6"   // electric blue for interactive elements
       },
       fontFamily: {
