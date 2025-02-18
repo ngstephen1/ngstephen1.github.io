@@ -27,7 +27,7 @@ export default function About() {
           , a multinational company that owns over 30 hotel and timeshare brands with 8,785 locations and 1,597,380 rooms across its network.
           At VT, I am a junior majoring in Computational Modeling and Data Analytics. I am also a student researcher at LLMs Lab 
           , and engineer at Hybrid Electric Vehicle Team (30-year-old team)
-          , this year I’m creating this portfolio website to replicate Google Chrome Browser, since I was inspired by a Faculty Reseacher at Gemini and a Google Developer Expert, who I worked with.{" "}
+          . This year I’m creating this portfolio website to replicate Google Chrome Browser, since I was inspired by a Faculty Reseacher at Gemini and a Google Developer Expert, who I worked with.{" "}
           <span>
             <Link
               className="inline-flex items-center hover:underline hover:opacity-70 text-[#DED7FC] transform transition-all duration-300 gap-x-1"
@@ -43,7 +43,7 @@ export default function About() {
         </h2>
 
         <h2>
-        ...I approach life like a game of chess, always seeking bold moves and daring sacrifices to test my skills in the unknown.
+        ... I approach life like a game of chess, always seeking bold moves and daring sacrifices to test my skills in the unknown.
         </h2>
 
         <Link
