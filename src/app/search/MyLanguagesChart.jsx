@@ -24,7 +24,7 @@ const MyLanguagesChart = () => {
             backgroundColor: [
               '#fec20c', // Python
               '#3498db', // SQL
-              '#650000', // MATLAB
+              '#a24857', // MATLAB
               '#e67e22', // Java
               '#8a00c2', // JavaScript
               '#e74c3c', // HTML
