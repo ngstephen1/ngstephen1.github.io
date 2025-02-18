@@ -4,13 +4,13 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function SearchBar({ query }) {
-  const [search, setSearch] = useState("Search (Rum)oogle");
+  const [search, setSearch] = useState("Search (Stee)gle");
   const [showSearch, setShowSearch] = useState(false);
   const dropdownRef = useRef(null);
   const searches = [
-    { search: "rumeza's projects", param: "rumezas-projects" },
+    { search: "stephen's projects", param: "stephen-projects" },
     { search: "life", param: "life" },
-    { search: "why hire a rumeza", param: "why-hire-a-rumeza" },
+    { search: "why hire a stephen", param: "why-hire-a-stephen" },
   ];
   const path = usePathname();
 
@@ -43,7 +43,7 @@ export default function SearchBar({ query }) {
     >
       {path === "/" && (
         <h2 className="text-white text-6xl lg:text-7xl xl:text-8xl absolute -top-20 lg:-top-28">
-          (Rum)oogle
+          (Stee)gle
         </h2>
       )}
 
@@ -66,7 +66,7 @@ export default function SearchBar({ query }) {
           />
           <div
             className={`flex-grow px-4 py-2 bg-accent-color focus:outline-none ${
-              search === "Search (Rum)oogle" ? "text-accent-text" : "text-white"
+              search === "Search (Stee)gle" ? "text-accent-text" : "text-white"
             }`}
             onClick={() => setShowSearch(!showSearch)}
           >
@@ -83,7 +83,7 @@ export default function SearchBar({ query }) {
             />
             <Link
               className="bg-no-repeat w-5 h-5 bg-cover"
-              href={"https://calendly.com/rumeza/one-on-one"}
+              href={"https://calendly.com"}
               target="_blank"
               onMouseEnter={() => setTooltip(!tooltip)}
               onMouseLeave={() => setTooltip(!tooltip)}
@@ -101,7 +101,7 @@ export default function SearchBar({ query }) {
                 tooltip2 ? "block" : "hidden"
               } text-white absolute p-2 rounded-xl px-4 text-xs text-nowrap border border-accent-text border-opacity-40 top-12`}
             >
-              this just looks pretty
+              sing to the mic
             </div>
           </div>
         </div>

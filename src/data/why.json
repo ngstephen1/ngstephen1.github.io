@@ -2,10 +2,10 @@
     "title": "Blu3Whale ED",
     "type": "project",
     "alias": "blu3whale",
-    "headline": "Why everyone needs a rumeza",
+    "headline": "Why everyone needs a stephen",
     "timeline": "Jan 2022 - Mar 2022",
     "searchDescription": "Why wonder when you can get one",
     "aiDescription": ["I transform my environment.", "Ever since I learned how to program, my life’s purpose has been to use my technical expertise to transform the environments around me. This mission is deeply reflected in my career journey. Since the age of 15, I’ve worked with startups and tech companies across Canada, developing innovative solutions to address local and global issues. My technical and project management skills, combined with my design-thinking approach, have enabled me to consistently exceed expectations and deliver impactful results.", "In every role, I’ve sought unique opportunities to rise above challenges and push the boundaries of what’s possible. At Arcurve, I pitched and developed a recruitment feature with the potential to become a critical data-collection asset. Currently, as the youngest developer at Symbiotic AI, I’ve been deeply involved in achieving major product milestones, including deploying our platform via AWS, integrating EPIC API services, and designing interfaces for cardiologists to enhance revascularization decisions.","Beyond my technical expertise, I’ve also been recognized for my ability to ideate and pitch innovative solutions. My consulting efforts with companies like CIBC and Amazon Alexa have led to product ideas being considered for implementation, showcasing my skill in identifying opportunities and delivering value.","While my technical experiences are vast, I deeply value opportunities to broaden my exposure to the challenges and perspectives of diverse communities worldwide. I am seeking unique opportunities to apply my skills in software, project management, and design thinking to improve lives while broadening my understanding of how people around the world navigate and overcome challenges."],    "tech": ["Python", "Matplotlib", "Numpy", "NLTK"],
-    "links": [{"link": "https://github.com/rumezaa/blu3whale", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}]
+    "links": [{"link": "https://github.com", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}]
 
   }

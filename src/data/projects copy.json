@@ -1,10 +1,10 @@
 [
   {
-    "title": "Blu3Whale ED",
+    "title": "Marriott Code Fest",
     "type": "project",
     "alias": "blu3whale",
     "headline": "Girl discovers programming (***EMOTIONAL***)",
-    "timeline": "Jan 2022 - Mar 2022",
+    "timeline": "Oct 2024",
     "searchDescription": "A mobile app that combines community-driven features to help individuals suffering from eating disorders recover · Technovation Girls Semifinalist (Top 8 in Canada) · Python · Kivy · Sentiment Analysis",
     "longDescription": "Blu3Whale ED was the very first project I made two months into my programming journey. I was obsessed with Python at the time, so I spent countless hours trying to find a way to develop a mobile app using a framework the language would support and stumbled upon Kivy. Do I recommend this framework for mobile development? Eh.\n\nThe entire development process was quite clean, and I found the framework supported a breadth of UI customization. I incorporated a real-time public chat, a recipe search engine, and, using inspiration from similar apps on the market, a tracker that would instead track users' moods instead of their calories or other sensitive numbers. I used NLTK for sentiment analysis, a library I’m not sure still exists, but it was a nice intro into sentiment analysis as the framework had a comprehensive lexicon dictionary that attached polarity scores with an accuracy that made my grade-10 self say, “Wow!”\n\nIt took three weeks of 10-hour programming days and intense climbing of an exciting learning curve to create the app, and another whole month to figure out how to deploy the app to the Android store.\n\nProbably the most tedious part of the journey was installing a virtual machine on my laptop and navigating Linux for the first time. I cut it close, but I got the app to work and be downloadable via the Play Store just in time to submit it to the Technovation Girls competition, where I landed a semi-finalist position.",
     "tech": ["Python", "Matplotlib", "Numpy", "NLTK"],
@@ -12,41 +12,41 @@
 
   },
   {
-    "title": "YYC Tech Connect",
+    "title": "Deloitte Data Drive Series Competition",
     "type": "project",
     "headline": "Girl discovers programming with other people",
     "alias": "tech-connect",
-    "timeline": "Feb 2022 - Jun 2022",
+    "timeline": " Mar 2024 - May 2024",
     "searchDescription": "A calendar aggregator made with React and Flask to centralize ongoing events in the YYC tech sector using the Eventbrite API - I'm banned from this API now :(",
     "longDescription": "This was the first collaborative project I participated in and the first time I got to use React. Following my love for Python, I insisted on using Flask for the backend, which I hadn't used before. Back then, I equated everything to 'easy' if it was Python, so how hard could it be?\n\nKeeping in mind I had no knowledge about proxy servers nor understood the concept of ports, when it came time to connect the Flask backend with the React frontend my team created, the experience was... something I'm grateful I got to go through because I figured out everything without ChatGPT—unlike some of you (kidding, I love ChatGPT).\n\nIn short, I had to do something along the lines of hard-coding the build path for the frontend into my Flask application for it to render so it all ran on one port. Or something like that.\n\nHere, I realized Python was maybe not the best for everything.", 
     "tech": ["Flask", "EventBrite", "React.js", "Material UI"],
     "links": [{"link": "https://github.com/rumezaa/mockup", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg" }]
   },
   {
-    "title": "Winter Go",
+    "title": "Interactive Music Storytelling",
     "type": "hackathon",
     "alias": "winter-go",
     "headline": "Hackathon team saves Calgary's tourism scene",
-    "timeline": "Feb 2023",
+    "timeline": "Sep 2024",
     "searchDescription": "A web-app designed to recommend tourists locations and activities based on the weather. Top 3 project for YYCHacks 2023 · TailwindCSS · Express.js · Figma ",
     "longDescription": "My first hackathon project was a (semi) winner how much aura do I gain.", 
     "tech": ["Express.js", "Tailwind CSS", "An API I forgot the name of"],
     "links": [{"link": "https://hack2023.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
   },
   {
-    "title": "Torpedo",
+    "title": "Meta-consciousness for Test Takers and Success Seekers",
     "type": "startup",
     "alias": "torpedo",
     "headline": "Highschoolers undergo the startup cannon event ",
-    "timeline": "Mar 2023",
+    "timeline": "Jan 2024",
     "searchDescription": "Landing page for Torpedo, a mentorship platform aimed at connecting young talent with mentorship and skill activation opportunities · Labs Batch X",
     "longDescription": "Building Torpedo was an insightful journey into the realm of startups, and is really what fortified my interest for creating software that can be as big as the number of people it can impact. This journey pivoted some of my interests into the world of UI/UX and creating pitch decks for promosining project", 
     "links": [{"link": "https://main--spiffy-capybara-00bee2.netlify.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}, {"link": "https://github.com/rumezaa/jointorpedo.Inc", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}]
   },
   {
-    "title": "Alexa Connect",
+    "title": "Digital Twins for Motors Project",
     "alias": "alexa-connect",
-    "timeline": "Mar 2023",
+    "timeline": "Nov 2023 - Mar 2024",
     "headline": "18 somthing-year-olds pitch to Amazon Alexa (successfully)",
     "type": "consultancy",
     "searchDescription": "An Omegle and house party hybrid app recommendation to Amazon Alexa which matches users based on their shared interests and uses Alexa to guide them through an engaging activity · Consulting",

@@ -6,6 +6,8 @@ import projects from "../../data/projects.json";
 import experiences from "../../data/experience.json";
 import life from "../../data/life.json";
 import whyHire from "../../data/why.json";
+import React from 'react'; // language-chart
+import MyLanguagesChart from './MyLanguagesChart';
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
@@ -14,52 +16,47 @@ export default function Search() {
   const query = searchParams.get("q");
   const project = searchParams.get("p");
   const [selectedSearch, setSelectedSearch] = useState(
-    project === "meetmidway"
+    project === "MUSAIC"
       ? projects.find((proj) => proj.alias === "meetmidway")
       : ""
   );
   const displayQuery = query ? query : "";
   const displayData =
-    (displayQuery == "rumezas-projects" && [...projects]?.reverse()) ||
+    (displayQuery == "stephen-projects" && [...projects]?.reverse()) ||
     (displayQuery == "experience" && experiences) ||
     (displayQuery == "life" && [...life]?.reverse()) ||
-    (displayQuery == "why-hire-a-rumeza" && whyHire);
+    (displayQuery == "why-hire-a-stephen" && whyHire);
 
   const [showMore, setShowMore] = useState(false);
-  const [isOpen, setIsOpen] = useState(project === "meetmidway" ? true : false);
+  const [isOpen, setIsOpen] = useState(project === "MUSAIC" ? true : false);
   const languages = [
     "Python",
+    "SQL",
+    "MATLAB",
     "Java",
-    "C++",
     "JavaScript",
-    "Typescript",
     "HTML",
     "CSS",
-    "SQL",
-    "Sqlite",
-    "Solidity",
-    "Ruby",
-    "XML",
-    "GraphQL",
   ];
   const technologies = [
-    "React JS",
-    "React Native",
+    "PyTorch",
+    "OpenCV",
+    "Azure",
+    "MediaPipe",
     "Nodejs",
-    "Next JS",
-    "Flask",
-    "Django",
-    "Tailwind CSS",
-    "Postgres",
-    "Ruby on Rails",
-    "AWS",
+    "PyDub",
+    "Torchaudio",
+    "GCP",
+    "FastAPI",
+    "Hugging Face Transformers",
     "Nginx",
-    "Svelte",
+    "spaCy",
     "pandas",
     "NumPy",
     "Matplotlib",
-    "NLTK",
-    "Kivy"
+    "Gradio",
+    "Streamlit",
+    "Docker"
   ];
 
   useEffect(() => {
@@ -198,7 +195,7 @@ export default function Search() {
         <div className="border borber-b border-[0.05rem] border-white border-opacity-10" />
         <div className="w-full flex flex-row gap-x-20 py-10">
           <div className="flex flex-col gap-y-4 px-4 md:w-1/2  lg:pl-48">
-            {(displayQuery !== "why-hire-a-rumeza" &&
+            {(displayQuery !== "why-hire-a-stephen" &&
               displayData?.map((data, idx) => (
                 <div key={idx}>
                   <SearchItem data={data} />
@@ -222,56 +219,35 @@ export default function Search() {
                     <>
                       <h2>
                         <span className="bg-[#735B95] py-1">
-                          I transform environments.
+                          I connect the dots, and human feelings with machines.
                         </span>
                       </h2>
                       <h2 className="">
                         <span className="bg-[#735B95]  py-1">
-                          seeking global opportunities to specialize in emerging
-                          technologies and apply my skills in software, project
-                          management, and design thinking
+                          seeking opportunities in emerging technologies and applying my skills in software, business
+                          analytics, and the arts of life.
                         </span>
                       </h2>
                     </>
                   )}
 
                   <h2>
-                    Ever since I learned how to program, my life’s purpose has
-                    been to use my technical expertise to transform the
-                    environments around me. My technical and project management
-                    skills, combined with my design-thinking approach, have
-                    enabled me to consistently exceed expectations and deliver
-                    impactful results.
+                    I have always been passionate about the intersection of technology and creativity.
+                    My dream is to become an AI Musician, and to achieve that,
+                     I know I need to grow my technical skills. I had the opportunity to work with Bao Dai, a Google Developer Expert, on a Vietnamese Singing Voice Synthesis project, which sparked my fascination with Generative AI and signal processing. 
+                    This experience inspired me to explore how AI can transform entertainment and creative fields.
                   </h2>
 
                   <h2>
-                    In every role, I’ve sought unique opportunities to rise
-                    above challenges and push the boundaries of what’s possible.
-                    At Arcurve, I pitched and developed a recruitment feature
-                    with the potential to become a critical data-collection
-                    asset. Currently, as the youngest developer at Symbiotic AI,
-                    I’ve been deeply involved in achieving major product
-                    milestones, including deploying our platform via AWS,
-                    integrating EPIC API services, and designing interfaces for
-                    cardiologists to enhance revascularization decisions.
+                    In my role as Chief Operating Officer & Data Analyst at Lovealot.Together, I analyzed TikTok's algorithm to boost engagement across ten countries, increasing daily interactions by 5%. This experience showed me how powerful data-driven insights can be in shaping user experiences and making smart business decisions.
                   </h2>
 
                   <h2>
-                    My consulting efforts with companies like CIBC and Amazon
-                    Alexa have led to product ideas being considered for
-                    implementation, showcasing my skill in identifying
-                    opportunities and delivering value.
+                    Additionally, I led a team in Deloitte's Data Driven Series competition, where we developed a Fraud Detection System that earned top 3 recognition. These experiences taught me how to manage projects that drive real results.
                   </h2>
 
                   <h2>
-                    While my technical experiences are vast, I deeply value
-                    opportunities to broaden my exposure to the challenges and
-                    perspectives of diverse communities worldwide. I am seeking
-                    global opportunities to specialize in emerging technologies
-                    and apply my skills in software, project management, and
-                    design thinking to improve lives while broadening my
-                    understanding of how people around the world navigate and
-                    overcome challenges.
+                    While my academic and industrial experiences are vast, I deeply value opportunities to broaden my exposure in research. So, in spring 2025, I joined a Computer Science Lab at Virginia Tech, working on the research project "Search Engine Augmented Large Language Models," with an aim to contribute to the paper submission for the ACL Conference.
                   </h2>
 
                   {!showMore && (
@@ -304,26 +280,25 @@ export default function Search() {
             )}
           </div>
 
-          {displayQuery !== "why-hire-a-rumeza" && (
+          {displayQuery !== "why-hire-a-stephen" && (
             <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
-              <img
-                src={
-                  displayQuery == "life"
-                    ? "search-img/life.jpeg"
-                    : "https://github-readme-stats.vercel.app/api/top-langs/?username=rumezaa&layout=compact&theme=nightowl&hide_border=true&exclude_repo=the-www-blog,clean-water-foundation&langs_count=6"
-                }
-                alt="rumezaa"
-                className="w-full h-[17rem] rounded-t-lg"
-              />
+              {displayQuery === "life" ? (
+                <img
+                  src="search-img/life.jpeg"
+                  alt="stephen"
+                  className="w-full h-[17rem] rounded-t-lg"
+                />
+              ) : (
+                <MyLanguagesChart />
+              )}
 
-              {(displayQuery == "rumezas-projects" && (
+              {(displayQuery == "stephen-projects" && (
                 <div className="flex flex-col gap-y-3">
                   <h2 className="opacity-70 text-lg">
-                    I love building impact-driven, full-stack projects.{" "}
+                    I love working with cool giant data to drive business impact.
                   </h2>
                   <h2 className="opacity-70 text-lg">
-                    Currently, I'm working on specializing my technical skills
-                    in ML
+                    Now, I'm advancing my technical skills in AI/ML.
                   </h2>
 
                   <div className="flex flex-col">
@@ -360,24 +335,20 @@ export default function Search() {
                 </div>
               )) || (
                 <div className="flex flex-col gap-y-3 p-2">
-                  <h2 className="text-xl">"Lead a life worth telling"</h2>
-                  <h2 className="opacity-70 text-lg">
-                    This is one of my favourite quotes of all times as it
-                    continually motivates me to seek out unqiue, spontaneous
-                    experiences to increase my wordly exposure.
+                  <h2 className="text-xl">
+                    "The only thing constant in life is change. ⚡"
                   </h2>
                   <h2 className="opacity-70 text-lg">
-                    The following is an archive of memorable experiences where I
-                    leave my comfort zone to experience something new.
+                    I was passionate about chess for 10 years before shifting my focus to academics, founding my high school’s first chess club and later a research organization. I gave a TEDx speech on AI, explored meditation and solo travel, and published a book.
+                  </h2>
+                  <h2 className="opacity-70 text-lg">
+                    My passion for AI and music led me to work with a Google Developer on an AI music project and conduct research with a Google Researcher. I created this Google "Chro-me" website.
                   </h2>
 
                   <h2 className="opacity-70 text-lg">
-                    Warning: I over-romantacize my life a lot.
+                    I am chasing my dream of becoming a Hollywood musician.
                   </h2>
-
-                  <h2 className="opacity-70 text-sm">
-                    (but its more fun that way)
-                  </h2>
+                  <h2 className="text-xl">To me, change is the symphony of life.</h2>
                 </div>
               )}
             </div>
@@ -387,18 +358,15 @@ export default function Search() {
         {isOpen && <SearchItemOpen data={selectedSearch} />}
       </div>
 
-      {displayQuery == "why-hire-a-rumeza" && !showMore && (
+      {displayQuery == "why-hire-a-stephen" && !showMore && (
         <div className="pl-10 md:pl-48 pt-16 flex flex-col gap-y-2">
           <h2 className="text-sm">
-            Your search - <span className="font-bold">why hire a rumeza</span> -
-            did not match any documents
+            Your search - <span className="font-bold">why hire a Stephen</span> - did not match any documents
           </h2>
           <h2 className="text-sm">Suggestions:</h2>
           <ul className="list-disc pl-5 text-sm">
-            <li>
-              Don't search something preposterous (everyone needs a rumeza!)
-            </li>
-            <li>Contact Rumeza to learn more</li>
+            <li>Don't search something preposterous (everyone needs a Stephen!)</li>
+            <li>Contact Stephen to learn more</li>
           </ul>
         </div>
       )}

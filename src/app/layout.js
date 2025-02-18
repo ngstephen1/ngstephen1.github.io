@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/icon.ico" type="image/x-icon" sizes="200x256" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <title>rumoogle</title>
+        <title>Steegle</title>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -60,12 +60,12 @@ export default function RootLayout({ children }) {
           }}
         ></script>
 
-        <meta property="og:title" content="Rumoogle" />
+        <meta property="og:title" content="Steegle" />
         <meta property="og:description" content="everything you'll ever need" />
         <meta property="og:image" content="/Banner.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:type" content="image/png"/>
-        <meta name="twitter:title" content="Rumoogle" />
+        <meta name="twitter:title" content="Steegle" />
         <meta name="twitter:description" content="my typa g*ogle" />
         <meta name="twitter:image" content="https://rumeza.ca/Banner.png" />
       </head>

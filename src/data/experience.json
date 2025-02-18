@@ -1,38 +1,38 @@
 [
   {
-    "title": "Symbiotic AI",
+    "title": "Virginia Tech Department of Computer Science",
     "alias": "symbiotic",
-    "headline": "Health Interfaces Developer Intern",
+    "headline": "Quality Engineering Intern",
     "timeline": "present",
     "searchDescription": "Engineering the next tool to help doctors revascularization decisons",
     "longDescription": "At Symbiotic AI I'm helping develop V1 of Revaz AI. Learned lots about AWS, including SES, Amplify, S3, and EC2. Designed and then developed the waitlist site for the AI product."
   },
 
   {
-    "title": "EasyShifa",
+    "title": "FPT Software",
     "alias": "meetmidway",
-    "headline": "Software & UX/UI",
-    "timeline": "Aug 2023 - Sept 2023",
+    "headline": "Artificial Intelligence Intern",
+    "timeline": "May 2024 - Oct 2024",
     "type": "startup",
-    "searchDescription": "Creating the first uber pharmacy in pakistan",
-    "longDescription": "I created pitch decks used to land partnerships with leading Pakistani pharmacies, and worked on the mobiel app system in React Native"
+    "searchDescription": "Advisor: Dr. Tu Vu, Faculty Researcher at Google Gemini (tuvllms.github.io)",
+    "longDescription": "Research Topic: Search Engine Augmented Large Language Models"
   },
   {
-    "title": "Arcurve",
+    "title": "Generative AI Project: Singing Voice Synthesis",
     "alias": "Software Engineer",
-    "headline": "Software Engineer",
-    "timeline": "Jul 2023 - Aug 2023",
+    "headline": "Research Assistant",
+    "timeline": "Nov 2023 - Mar 2024",
     "type": "startup",
     "searchDescription": "Leading North America's full-service technology, advisory and software development companies",
     "longDescription": "My first internship in a corporate environment - I revamped the recruitment screen and made beyond the expecations of my role by creating a game to help you decide how you'd best fit into the company. Learned lots about scrum. "
   },
   {
-    "title": "Pixeltree Inc",
-    "alias": "Software Engineer",
-    "headline": "Software Engineer",
-    "timeline": "Jul 2022 - Aug 2022",
+    "title": "Lovealot.Together (400K followers and 22M+ likes on TikTok)",
+    "alias": "Chief Operating Officer & Data Analyst",
+    "headline": "Chief Operating Officer & Data Analyst",
+    "timeline": "Sep 2022 - Present",
     "type": "startup",
-    "searchDescription": "Helping businesses and entrepreneurs bring their app ideas to life",
-    "longDescription": "I got this internship @ the ripe of age 15. This is where my love for tailwind sprouted. Learned lots about Ruby on Rails. Worked like a vampire because I was in a different timezone."
+    "searchDescription": "Analyzed the TikTok algorithm and viewing data to create videos tailored to viewers' interests across 10 countries.",
+    "longDescription": "Implemented a Selenium bot to like comments, increasing daily viewer interactions by 5% and improving retention. Secured a paid partnership with Vietnam’s number 1 pay TV provider, promoting products for 10+ brands."
   }
 ]

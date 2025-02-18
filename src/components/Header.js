@@ -20,7 +20,7 @@ export default function Header({ setShowMailer }) {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText("rumeza06@gmail.com");
+      await navigator.clipboard.writeText("npnallstar@gmail.com");
       setIsCopy(true);
       setTimeout(() => {
         setIsCopy(false);
@@ -31,26 +31,26 @@ export default function Header({ setShowMailer }) {
   };
 
   const externalLinks = [
-    { text: "code :3", icon: "github.svg", url: "https://github.com/rumezaa" },
+    { text: "code", icon: "github.svg", url: "https://github.com/ngstephen1" },
     {
-      text: "stalk",
+      text: "explore",
       icon: "x.svg",
-      url: "https://x.com/rumezaft",
+      url: "https://x.com/",
     },
     {
       text: "connect",
       icon: "linkedin.svg",
-      url: "https://www.linkedin.com/in/ftrumeza/",
+      url: "https://www.linkedin.com/in/nguyenpn1/",
     },
     {
-      text: "designs",
-      icon: "figma.svg",
-      url: "https://www.figma.com/design/t9MDds1XizvuS3fBXsGPGo/Rumeza's-Design-Portfolio?node-id=0-1&t=y3LDldLAr8SO7UF4-1",
+      text: "resume",
+      icon: "resumeicon.png",
+      url: "https://docs.google.com/document/d/10SzxbVKTdz6fP6wTFl4gU7gxC80E4v6y/edit",
     },
     {
       text: "articles",
-      icon: "articles.svg",
-      url: "https://rumezasrace.substack.com/",
+      icon: "ai-brain.png",
+      url: "https://stephenmusaic.substack.com",
     },
   ];
 
@@ -95,7 +95,7 @@ export default function Header({ setShowMailer }) {
       >
         {(path !== "/" && (
           <Link href="/" className="text-white text-2xl hidden md:block">
-            (Rum)oogle
+            (Stee)gle
           </Link>
         )) || (
           <Link
@@ -112,7 +112,7 @@ export default function Header({ setShowMailer }) {
       <div className="flex flex-row items-center justify-center gap-x-5">
         {path !== "/" && (
           <Link href="/" className={`text-white text-2xl block md:hidden`}>
-            (Rum)oogle
+            (Stee)gle
           </Link>
         )}
         <div
@@ -190,7 +190,7 @@ export default function Header({ setShowMailer }) {
               <div className="flex flex-col w-full">
                 <div className="flex flex-row w-full gap-x-10 justify-end">
                   <div className="flex flex-row">
-                    <h2>rumeza06@gmail.com</h2>
+                    <h2>npnallstar@gmail.com</h2>
                     <div
                       className="bg-no-repeat bg-cover w-5 h-5 cursor-pointer"
                       onClick={handleCopy}
@@ -226,11 +226,11 @@ export default function Header({ setShowMailer }) {
                     style={{ backgroundImage: "url(head-shot.png)" }}
                     className="rounded-full bg-no-repeat bg-cover w-24 h-24 cursor-pointer"
                   />
-                  <h2 className="text-xl">Hi, I'm Rumeza</h2>
+                  <h2 className="text-xl">Hi, I'm Stephen</h2>
                 </div>
                 <div className="flex flex-col font-ropaSans-light text-md gap-y-5">
                   <h2 className="text-center">
-                    Welcome to my personal site. 💜
+                    Welcome to my personal space! 🎶
                   </h2>
 
                   <div className="flex flex-col">
