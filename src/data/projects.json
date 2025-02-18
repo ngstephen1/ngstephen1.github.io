@@ -19,7 +19,7 @@
     "searchDescription": "Cognitive Science and Research Writing",
     "longDescription": "......", 
     "tech": ["Writing", "Review"],
-    "links": [{"link": "https://github.com/rumezaa/mockup", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg" }]
+    "links": [{"link": "https://github.com", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg" }]
   },
   {
     "title": "Codefest",
@@ -36,7 +36,7 @@
     "title": "Research Organization",
     "type": "startup",
     "alias": "torpedo",
-    "headline": "The Strike succeeded with both Connected Minds and Connected Garden projects.",
+    "headline": "The Strike succeeded with both Connected Minds and Connected Garden projects",
     "timeline": "Nov 2019 - Nov 2023",
     "searchDescription": "Highschool stuff.", 
     "links": [{"link": "https://main--spiffy-capybara-00bee2.netlify.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}, {"link": "https://github.com/rumezaa/jointorpedo.Inc", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}]
@@ -91,8 +91,19 @@
     "type": "project",
     "tech": ["Python","Differentiable Digital Signal Processing", "Natural Language Processing"],
     "searchDescription": "Led by a Google Developer Expert, we make an AI that can sing.",
-    "longDescription": "Our platform onboard vulnerable individuals by listening to their stories and struggles. We use a custom TensorFlow model with 75 input nodes and dual 16-node hidden layers to analyze keyword frequency and emotions in user narratives. This allows us to generate tailored resource, job, and mentor suggestions based on users' experiences and skills. Developed in under 24 hours for Hack the Change 2024, we also engaged with our target demographic (the homeless) to gather feedback on our product.", 
+    "longDescription": "Data Annotation, Data Pipe Line, Data Processing, Data Conversion", 
     "links": [{"link": "https://github.com", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://hackthechange-lime.vercel.app/", "name": "check it out", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
+  },
+
+  {
+    "title": "FPT Artist",
+    "alias": "meetmidway",
+    "headline": "An Integration of Image Personalization, Speech Recognition, and Natural Language Processing",
+    "timeline": "May - August 2024",
+    "type": "startup",
+    "searchDescription": "I join this team because I want to explore human sounds and souls",
+    "longDescription": "fpt-aicenter.com", 
+    "links": [{"link": "https://www.instagram.com/reel/DAhFIbZSyEG/", "name": "video", "url": "video-outline.svg" , "urlHover": "video-outline.svg"}]
   },
   {
     "title": "FPT Artist",
@@ -104,16 +115,6 @@
     "searchDescription": "Integrating generative artificial intelligence into contemporary art creation. ",
     "longDescription": "A study of the mosaic patterns on the columns at the Red Scarf Theater, Hanoi Children’s Palace, in collaboration with artificial intelligence’ is a collaborative project between Studio Pham Minh Hieu (Stanford alum) and the FPT Software AI Center, aimed at integrating generative artificial intelligence into contemporary art creation.", 
     "links": [{"link": "https://github.com", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://drive.google.com/file/d/1YPrVSsCgJ8JRlvLQXzU20SsFIBdKSkDx/view", "name": "team", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
-  },
-  {
-    "title": "FPT Artist",
-    "alias": "meetmidway",
-    "headline": "An Integration of Image Personalization, Speech Recognition, and Natural Language Processing",
-    "timeline": "May - August 2024",
-    "type": "startup",
-    "searchDescription": "I join this team because I want to explore human sounds and souls",
-    "longDescription": "fpt-aicenter.com", 
-    "links": [{"link": "https://www.instagram.com/reel/DAhFIbZSyEG/", "name": "video", "url": "video-outline.svg" , "urlHover": "video-outline.svg"}]
   }
 
 ]
