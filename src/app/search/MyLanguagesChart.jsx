@@ -22,7 +22,7 @@ const MyLanguagesChart = () => {
             label: 'Usage (%)',
             data: usageData,
             backgroundColor: [
-              '#CCA300', // Python
+              '#FFD700', // Python
               '#3498db', // SQL
               '#a24857', // MATLAB
               '#e67e22', // Java
