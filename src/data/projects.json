@@ -106,13 +106,13 @@
     "links": [{"link": "https://www.instagram.com/reel/DAhFIbZSyEG/", "name": "video", "url": "video-outline.svg" , "urlHover": "video-outline.svg"}]
   },
   {
-    "title": "FPT Artist",
+    "title": "Lead AI Artist Intern",
     "alias": "dogma",
     "headline": "AI Mosaic Art on real-life pillars, showcased at UNESCO-partnered art festival",
     "timeline": "July - November 2024",
     "type": "project",
-    "tech": ["GenAI", "Python", "GAN", "Image Processing"],
-    "searchDescription": "Integrating generative artificial intelligence into contemporary art creation. ",
+    "tech": ["GenAI", "Python", "GAN", "Image Processing", "Leadership", "Project Management"],
+    "searchDescription": "Integrating generative artificial intelligence into contemporary art creation. Lead the way for human, AI, and artists.",
     "longDescription": "A study of the mosaic patterns on the columns at the Red Scarf Theater, Hanoi Children’s Palace, in collaboration with artificial intelligence’ is a collaborative project between Studio Pham Minh Hieu (Stanford alum) and the FPT Software AI Center, aimed at integrating generative artificial intelligence into contemporary art creation.", 
     "links": [{"link": "https://github.com", "name": "github", "url": "github-outline.svg" , "urlHover": "github-outline.svg"}, {"link": "https://drive.google.com/file/d/1YPrVSsCgJ8JRlvLQXzU20SsFIBdKSkDx/view", "name": "team", "url": "link-outline.svg" , "urlHover": "link-outline.svg"}]
   }
