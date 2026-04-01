@@ -1,70 +1,55 @@
 # Steegle
 
-Personal portfolio built with Next.js and Tailwind CSS.
+Steegle is the personal portfolio of Nguyen Phan Nguyen, also known as Stephen.
 
-## Local development
+This site presents my work across AI research, software engineering, data systems, creative technology, music, and storytelling. It is designed as a playful search-inspired portfolio that highlights my projects, work experience, life journey, and the kind of impact I want to build through AI.
 
-1. `npm install`
-2. `npm run dev`
-3. Open `http://localhost:3000`
+## About Me
 
-## Build
+I am a Data Science student at Virginia Tech with interests spanning:
 
-- `npm run build`
+- AI engineering
+- software engineering
+- data science and analytics
+- multimodal and agentic systems
+- music, art, and creative technology
 
-The project is configured for static export via Next.js `output: "export"`.
+I enjoy building systems that connect research, product, and real-world use.
 
-## Troubleshooting
+## Tech
 
-- If you hit a dev-only chunk error such as `Cannot find module './638.js'`, clear generated artifacts and restart:
-  - `npm run dev:clean`
-- You can also clean manually with:
-  - `npm run clean`
-- Dev and production builds now use separate output folders:
-  - `next dev` writes to `.next-dev`
-  - `next build` writes to `.next`
+This portfolio is built with:
 
-## Manual Image Replacements
+- Next.js
+- React
+- Tailwind CSS
 
-These are the content images you will likely want to replace manually. Icons in `public/icons/` are part of the UI and do not need to change unless you want a new visual system.
+It is configured as a static-exported site for deployment on GitHub Pages and Vercel.
 
-### Core profile images
+## Local Development
 
-| File | Used in | Notes |
-| --- | --- | --- |
-| `public/head-shot.png` | Header profile avatar, About page portrait | Replace with your preferred headshot. |
-| `public/signature.png` | About page decorative signature/music graphic | Replace if you want a new personal mark or illustration. |
-| `public/search-img/life.jpeg` | Right-side hero image on the `life` page | Replace with the personal image you want featured there. |
+```bash
+npm install
+npm run dev
+```
 
-### Search card image pairs
+Open `http://localhost:3000`.
 
-Each search result uses two files:
-- `public/search-img/<alias>-icon.png`
-- `public/search-img/<alias>-banner.png`
+## Production Build
 
-| Alias | Current site content using it | Files to replace |
-| --- | --- | --- |
-| `tech-connect` | Noteshell, Productivity Agent | `public/search-img/tech-connect-icon.png`, `public/search-img/tech-connect-banner.png` |
-| `bumblebee` | Lovealot.Together | `public/search-img/bumblebee-icon.png`, `public/search-img/bumblebee-banner.png` |
-| `winter-go` | AI Hire AI, AI Housing Agent, Marriott International | `public/search-img/winter-go-icon.png`, `public/search-img/winter-go-banner.png` |
-| `renew` | AI Financial Coach, Cisco Systems, Hybrid Electric Vehicle Team | `public/search-img/renew-icon.png`, `public/search-img/renew-banner.png` |
-| `torpedo` | AI Medical Research Tool | `public/search-img/torpedo-icon.png`, `public/search-img/torpedo-banner.png` |
-| `muto` | Generative AI: Singing Voice Synthesis, Google DeepMind Research at Virginia Tech | `public/search-img/muto-icon.png`, `public/search-img/muto-banner.png` |
-| `blu3whale` | Computational Neuroscience Lab at Virginia Tech (IMAGINE) | `public/search-img/blu3whale-icon.png`, `public/search-img/blu3whale-banner.png` |
-| `rbc` | Meta-consciousness for Test Takers and Success Seekers, Growth | `public/search-img/rbc-icon.png`, `public/search-img/rbc-banner.png` |
-| `speech` | Institute for Creativity, Arts, and Technology, Confidence | `public/search-img/speech-icon.png`, `public/search-img/speech-banner.png` |
-| `alexa-connect` | Deloitte Data Competition | `public/search-img/alexa-connect-icon.png`, `public/search-img/alexa-connect-banner.png` |
-| `meetmidway` | Interactive Music Storytelling | `public/search-img/meetmidway-icon.png`, `public/search-img/meetmidway-banner.png` |
-| `dogma` | FPT Software | `public/search-img/dogma-icon.png`, `public/search-img/dogma-banner.png` |
-| `spont` | Brave & Love | `public/search-img/spont-icon.png`, `public/search-img/spont-banner.png` |
-| `yyz` | Chess & Life | `public/search-img/yyz-icon.png`, `public/search-img/yyz-banner.png` |
+```bash
+npm run build
+```
 
-### Current recommendation
+## Deploy
 
-The most important replacements are:
-- `public/head-shot.png`
-- `public/signature.png`
-- `public/search-img/life.jpeg`
-- The aliases currently reused across multiple entries: `tech-connect`, `winter-go`, `renew`, `muto`, `rbc`, `speech`
+Push to `main` to deploy:
 
-If you want every project and experience card to feel custom, the cleanest next step is to give each entry its own unique `imageAlias` and matching icon/banner pair.
+- GitHub Pages: `https://ngstephen1.github.io`
+- Vercel: `https://steegle.vercel.app`
+
+```bash
+git add .
+git commit -m "update portfolio"
+git push origin main
+```
