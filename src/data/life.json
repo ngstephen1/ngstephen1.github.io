@@ -27,8 +27,16 @@
     "bannerSrc": "/search-img/vt-cro.png",
     "headline": "Virginia Tech Competitive Robotics Organization",
     "timeline": "October 2023 - Present",
-    "searchDescription": "Virginia Tech's largest design team.",
-    "longDescription": "Mission\nImprove the presence of robotics at Virginia Tech and surrounding communities.",
+    "searchDescription": "Virginia Tech's largest design team, building robotics through small, dedicated teams across multiple labs and projects.",
+    "longDescription": "Mission\nImprove the presence of robotics at Virginia Tech and surrounding communities.\n\nWhat we are\nWe are Virginia Tech's premier engineering team, with six design teams working on varied projects and four support teams across three labs.\n\nWe believe in small, dedicated teams.\nEven though we are Virginia Tech's largest design team, we believe in small, tight-knit design teams of 8-12 motivated and talented engineers.",
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/vt-cro-group-pic.png",
+        "alt": "Virginia Tech Competitive Robotics Organization group picture",
+        "caption": "VT CRO Group Picture | Last Year with our Founder Marco"
+      }
+    ],
     "links": [
       {
         "name": "view website",
