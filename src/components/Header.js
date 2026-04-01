@@ -21,7 +21,7 @@ export default function Header({ setShowMailer }) {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText("stephenallstar24@vt.edu");
+      await navigator.clipboard.writeText("npnallstar@gmail.com");
       setTextCopy(true);
       setTimeout(() => {
         setTextCopy(false);
@@ -39,19 +39,24 @@ export default function Header({ setShowMailer }) {
       url: "https://www.linkedin.com/in/nguyenpn1/",
     },
     {
-      text: "Hackathon",
-      icon: "articles.svg",
+      text: "research",
+      icon: "google-scholar-icon.png",
+      url: "https://scholar.google.com/citations?user=3K0cXZwAAAAJ&hl=en&authuser=1",
+    },
+    {
+      text: "hackathon",
+      icon: "hack-icon.png",
       url: "https://devpost.com/stephenallstar24",
     },
     {
       text: "card",
-      icon: "link-outline.svg",
+      icon: "card-icon.png",
       url: "https://dot.cards/steegle",
     },
     {
       text: "resume",
       icon: "resumeicon.png",
-      url: "https://docs.google.com/document/d/10SzxbVKTdz6fP6wTFl4gU7gxC80E4v6y/edit",
+      url: "https://drive.google.com/file/d/19eZtbwBF0EDGYkdEILCU5jtTm_a6Ya7w/view?usp=sharing",
     },
   ];
 
@@ -178,7 +183,7 @@ export default function Header({ setShowMailer }) {
               <div className="flex w-full flex-col">
                 <div className="flex w-full flex-row justify-end gap-x-10">
                   <div className="flex flex-row">
-                    <h2>stephenallstar24@vt.edu</h2>
+                    <h2>npnallstar@gmail.com</h2>
                     <div
                       className="h-5 w-5 cursor-pointer bg-cover bg-no-repeat"
                       onClick={handleCopy}
@@ -215,11 +220,11 @@ export default function Header({ setShowMailer }) {
                     style={{ backgroundImage: "url(head-shot.png)" }}
                     className="h-24 w-24 cursor-pointer rounded-full bg-cover bg-no-repeat"
                   />
-                  <h2 className="text-xl">Hi, I&apos;m Nguyen</h2>
+                  <h2 className="text-xl">Hi, I&apos;m Stephen!</h2>
                 </div>
 
                 <div className="flex flex-col gap-y-4 text-md">
-                  <h2 className="text-center">AI / ML engineer and builder.</h2>
+                  <h2 className="text-center">AI Engineer, Artist, Musician</h2>
 
                   <div className="flex flex-col">
                     <h2 className="text-sm text-white">HOW TO USE</h2>

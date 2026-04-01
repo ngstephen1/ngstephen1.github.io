@@ -11,43 +11,422 @@ import whyHire from "@/data/why.json";
 import MyLanguagesChart from "./MyLanguagesChart";
 import KintsugiHeartsDreamDetail from "@/components/project-details/KintsugiHeartsDreamDetail";
 
-const languages = [
-  "Python",
-  "TypeScript",
-  "Java",
-  "SQL",
-  "CUDA",
-  "Swift",
-  "Go",
+const projectStackSections = [
+  {
+    title: "programming languages",
+    items: [
+      "Python",
+      "Java",
+      "R",
+      "CUDA",
+      "Go",
+      "TypeScript",
+      "Kotlin",
+      "Swift",
+      "Rust",
+      "Bash",
+      "C",
+      "C++",
+      "MATLAB",
+    ],
+  },
+  {
+    title: "frameworks & libraries",
+    items: [
+      "Pandas",
+      "Numpy",
+      "TensorFlow",
+      "PyTorch",
+      "spaCy",
+      "Keras",
+      "React",
+      "Spring Boot",
+      "Vue.js",
+      "FastAPI",
+      "REST",
+      "Seaborn",
+      "scikit-learn",
+      "Next.js",
+      "Flask",
+      "OpenCV",
+      ".NET Core",
+      "XGBoost",
+      "Streamlit",
+      "TensorRT",
+      "LangChain",
+      "Vite",
+    ],
+  },
+  {
+    title: "technologies",
+    items: [
+      "Microsoft Azure",
+      "AWS",
+      "IBM",
+      "GCP",
+      "Snowflake",
+      "SLURM",
+      "NVIDIA GPUs",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "MongoDB",
+      "SQL",
+      "Cosmos DB",
+      "ROS 2",
+      "Jira",
+      "Selenium",
+      "Node.js",
+      "Appium",
+      "PySpark",
+      "Qmetry",
+      "Harness",
+      "Jenkins",
+      "Nginx",
+      "Arduino",
+    ],
+  },
 ];
 
-const projectTechnologies = [
-  "PyTorch",
-  "Azure OpenAI",
-  "AWS Bedrock",
-  "Amazon Nova",
-  "Flask",
-  "React",
-  "Hugging Face",
-  "FastAPI",
-  "Docker",
-  "ROS 2",
-  "Snowflake",
-  "Node.js",
+const workExperienceBadges = [
+  {
+    title: "instruments",
+    subtitle: "programming languages",
+    items: [
+      {
+        alt: "Python",
+        src: "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
+      },
+      {
+        alt: "Java",
+        src: "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white",
+      },
+      {
+        alt: "R",
+        src: "https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white",
+      },
+      {
+        alt: "CUDA",
+        src: "https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white",
+      },
+      {
+        alt: "Go",
+        src: "https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white",
+      },
+      {
+        alt: "TypeScript",
+        src: "https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white",
+      },
+      {
+        alt: "Kotlin",
+        src: "https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white",
+      },
+      {
+        alt: "Swift",
+        src: "https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white",
+      },
+      {
+        alt: "Rust",
+        src: "https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white",
+      },
+      {
+        alt: "Bash",
+        src: "https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white",
+      },
+      {
+        alt: "MATLAB",
+        src: "https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white",
+      },
+      {
+        alt: "HTML5",
+        src: "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+      },
+      {
+        alt: "CSS3",
+        src: "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
+      },
+      {
+        alt: "C",
+        src: "https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white",
+      },
+      {
+        alt: "C++",
+        src: "https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white",
+      },
+    ],
+  },
+  {
+    title: "synths & plugins",
+    subtitle: "frameworks & libraries",
+    items: [
+      {
+        alt: "pandas",
+        src: "https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white",
+      },
+      {
+        alt: "NumPy",
+        src: "https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white",
+      },
+      {
+        alt: "TensorFlow",
+        src: "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white",
+      },
+      {
+        alt: "PyTorch",
+        src: "https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white",
+      },
+      {
+        alt: "spaCy",
+        src: "https://img.shields.io/badge/spaCy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white",
+      },
+      {
+        alt: "Keras",
+        src: "https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white",
+      },
+      {
+        alt: "OpenCV",
+        src: "https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white",
+      },
+      {
+        alt: "scikit-learn",
+        src: "https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white",
+      },
+      {
+        alt: "XGBoost",
+        src: "https://img.shields.io/badge/XGBoost-EC4D37?style=for-the-badge",
+      },
+      {
+        alt: "TensorRT",
+        src: "https://img.shields.io/badge/TensorRT-76B900?style=for-the-badge&logo=nvidia&logoColor=white",
+      },
+      {
+        alt: "Seaborn",
+        src: "https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge",
+      },
+      {
+        alt: "LangChain",
+        src: "https://img.shields.io/badge/LangChain-000000?style=for-the-badge",
+      },
+      {
+        alt: "Hugging Face",
+        src: "https://img.shields.io/badge/Hugging%20Face-FFB000?style=for-the-badge&logo=huggingface&logoColor=white",
+      },
+      {
+        alt: "Gradio",
+        src: "https://img.shields.io/badge/Gradio-F97316?style=for-the-badge",
+      },
+      {
+        alt: "React",
+        src: "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+      },
+      {
+        alt: "Next.js",
+        src: "https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white",
+      },
+      {
+        alt: "Vue.js",
+        src: "https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white",
+      },
+      {
+        alt: "Vite",
+        src: "https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white",
+      },
+      {
+        alt: "Flask",
+        src: "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white",
+      },
+      {
+        alt: "Django",
+        src: "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white",
+      },
+      {
+        alt: "FastAPI",
+        src: "https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white",
+      },
+      {
+        alt: "Spring Boot",
+        src: "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white",
+      },
+      {
+        alt: ".NET Core",
+        src: "https://img.shields.io/badge/.NET%20Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white",
+      },
+      {
+        alt: "Streamlit",
+        src: "https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white",
+      },
+      {
+        alt: "REST API",
+        src: "https://img.shields.io/badge/REST%20API-FF6F00?style=for-the-badge",
+      },
+    ],
+  },
+  {
+    title: "studio gear",
+    subtitle: "technologies & tools",
+    items: [
+      {
+        alt: "Microsoft Azure",
+        src: "https://img.shields.io/badge/Microsoft%20Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white",
+      },
+      {
+        alt: "AWS",
+        src: "https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white",
+      },
+      {
+        alt: "IBM",
+        src: "https://img.shields.io/badge/IBM-054ADA?style=for-the-badge&logo=ibm&logoColor=white",
+      },
+      {
+        alt: "Azure OpenAI",
+        src: "https://img.shields.io/badge/Azure%20OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white",
+      },
+      {
+        alt: "GCP",
+        src: "https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white",
+      },
+      {
+        alt: "Snowflake",
+        src: "https://img.shields.io/badge/Snowflake-29B5E8?style=for-the-badge&logo=snowflake&logoColor=white",
+      },
+      {
+        alt: "SQL",
+        src: "https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white",
+      },
+      {
+        alt: "OpenClaw lobster",
+        src: "https://img.shields.io/badge/OpenClaw-%F0%9F%A6%9E-7A4DFF?style=for-the-badge",
+      },
+      {
+        alt: "MongoDB",
+        src: "https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white",
+      },
+      {
+        alt: "PostgreSQL",
+        src: "https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white",
+      },
+      {
+        alt: "Cosmos DB",
+        src: "https://img.shields.io/badge/Cosmos%20DB-0089D6?style=for-the-badge&logo=azurecosmosdb&logoColor=white",
+      },
+      {
+        alt: "Node.js",
+        src: "https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white",
+      },
+      {
+        alt: "Nginx",
+        src: "https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white",
+      },
+      {
+        alt: "Docker",
+        src: "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+      },
+      {
+        alt: "Kubernetes",
+        src: "https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white",
+      },
+      {
+        alt: "SLURM",
+        src: "https://img.shields.io/badge/SLURM-1F2937?style=for-the-badge",
+      },
+      {
+        alt: "NVIDIA GPUs",
+        src: "https://img.shields.io/badge/NVIDIA%20GPUs-76B900?style=for-the-badge&logo=nvidia&logoColor=white",
+      },
+      {
+        alt: "Git",
+        src: "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white",
+      },
+      {
+        alt: "ROS 2",
+        src: "https://img.shields.io/badge/ROS%202-22314E?style=for-the-badge&logo=ros&logoColor=white",
+      },
+      {
+        alt: "Arduino",
+        src: "https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white",
+      },
+      {
+        alt: "Jira",
+        src: "https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white",
+      },
+      {
+        alt: "BrowserStack",
+        src: "https://img.shields.io/badge/BrowserStack-FF7A00?style=for-the-badge&logo=browserstack&logoColor=white",
+      },
+      {
+        alt: "Selenium",
+        src: "https://img.shields.io/badge/Selenium-43B02A?style=for-the-badge&logo=selenium&logoColor=white",
+      },
+      {
+        alt: "Appium",
+        src: "https://img.shields.io/badge/Appium-662D91?style=for-the-badge&logo=appium&logoColor=white",
+      },
+      {
+        alt: "Harness",
+        src: "https://img.shields.io/badge/Harness-3C3C3C?style=for-the-badge",
+      },
+      {
+        alt: "GitHub Copilot",
+        src: "https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white",
+      },
+      {
+        alt: "Adobe Analytics",
+        src: "https://img.shields.io/badge/Adobe%20Analytics-FF0000?style=for-the-badge&logo=adobe&logoColor=white",
+      },
+      {
+        alt: "Jenkins",
+        src: "https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white",
+      },
+      {
+        alt: "QMetry",
+        src: "https://img.shields.io/badge/QMetry-1E90FF?style=for-the-badge",
+      },
+      {
+        alt: "Figma",
+        src: "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white",
+      },
+      {
+        alt: "PySpark",
+        src: "https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white",
+      },
+      {
+        alt: "Power BI",
+        src: "https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black",
+      },
+      {
+        alt: "Tableau",
+        src: "https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white",
+      },
+    ],
+  },
 ];
 
-const experienceTechnologies = [
-  "RAG",
-  "vLLM",
-  "SQL",
-  "BrowserStack",
-  "Harness",
-  "QMetry",
-  "Computer Vision",
-  "NLP",
-  "ROS 2",
-  "Evaluation",
-];
+function BadgeWall({ title, subtitle, items }) {
+  return (
+    <div className="flex flex-col gap-y-3 rounded-lg border border-white/10 bg-white/[0.03] p-3">
+      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+        <h2 className="text-sm uppercase tracking-wider">{title}</h2>
+        {subtitle && (
+          <h3 className="text-xs uppercase tracking-[0.18em] text-white/45">
+            {subtitle}
+          </h3>
+        )}
+      </div>
+      <div className="flex flex-row flex-wrap gap-2 overflow-hidden">
+        {items.map((item) => (
+          <img
+            key={item.alt}
+            src={item.src}
+            alt={item.alt}
+            className="h-6 max-w-full w-auto rounded-sm md:h-7"
+            loading="lazy"
+            referrerPolicy="no-referrer"
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const detailComponentByAlias = {
   "kintsugi-hearts-dream": KintsugiHeartsDreamDetail,
@@ -222,7 +601,12 @@ export default function Search() {
             <h2 className="w-full text-2xl">{data.title}</h2>
 
             {!!data.links?.length && (
-              <div className="flex w-full flex-row flex-wrap gap-2">
+              <div className="flex w-full flex-row flex-wrap items-center gap-2">
+                {data.linksLabel && (
+                  <div className="mr-1 text-sm text-white/70">
+                    {data.linksLabel}
+                  </div>
+                )}
                 {data.links.map((link) => (
                   <Link
                     className={`flex flex-row items-center gap-x-2 rounded border px-3 py-1.5 text-sm font-medium transition-all duration-300 ${
@@ -359,77 +743,55 @@ export default function Search() {
 
     if (isWorkExperience) {
       return (
-        <div className="flex flex-col gap-y-3 p-2">
-          <h2 className="text-xl">
-            Research, product engineering, and real-time systems.
-          </h2>
-          <h2 className="text-lg opacity-70">
-            I’ve worked across ICLR-level research, enterprise mobile QA, AI art
-            delivery, and hardware-adjacent data systems.
-          </h2>
-          <h2 className="text-lg opacity-70">
-            That range makes me comfortable moving between evaluation, tooling,
-            infrastructure, and user-facing outcomes.
-          </h2>
-          <div className="flex flex-col">
-            <h2 className="text-sm uppercase tracking-wider">core stack</h2>
-            <div className="flex flex-row flex-wrap gap-2">
-              {experienceTechnologies.map((stack) => (
-                <div
-                  key={stack}
-                  className="inline-flex rounded bg-white bg-opacity-10 p-1 text-sm text-accent-text"
-                >
-                  {stack}
-                </div>
-              ))}
-            </div>
+        <div className="flex flex-col gap-y-4 p-3 md:p-4">
+          <div className="flex flex-col gap-y-1 pb-1">
+            <h2 className="text-sm uppercase tracking-wider text-accent-text">
+              music-coded tech stack
+            </h2>
+          </div>
+          <div className="flex flex-col gap-y-4">
+            {workExperienceBadges.map((section) => (
+              <BadgeWall
+                key={section.title}
+                title={section.title}
+                subtitle={section.subtitle}
+                items={section.items}
+              />
+            ))}
           </div>
         </div>
       );
     }
 
     return (
-      <div className="flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-4">
         <MyLanguagesChart />
-        <div className="flex flex-col gap-y-3 p-2">
-          <h2 className="text-lg opacity-70">
-            I like work that blends research depth, product speed, and measurable
-            impact.
-          </h2>
-          <h2 className="text-lg opacity-70">
-            The strongest thread in my portfolio is shipping AI systems that are
-            both technically ambitious and easy to explain.
-          </h2>
-
-          <div className="flex flex-col">
-            <h2 className="text-sm uppercase tracking-wider">languages</h2>
-            <div className="flex flex-row flex-wrap gap-2">
-              {languages.map((stack) => (
-                <div
-                  key={stack}
-                  className="inline-flex rounded bg-white bg-opacity-10 p-1 text-sm text-accent-text"
-                >
-                  {stack}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col">
-            <h2 className="text-sm uppercase tracking-wider">
-              frameworks & libraries
+        <div className="flex flex-col gap-y-4 px-2 pb-2">
+          <div className="rounded-xl border border-white/8 bg-white/[0.05] px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+            <h2 className="text-[1.05rem] leading-8 text-white/95 md:text-[1.1rem]">
+              I enjoy working with huge datasets, building AI products that
+              drive business values.
             </h2>
-            <div className="flex flex-row flex-wrap gap-2">
-              {projectTechnologies.map((stack) => (
-                <div
-                  key={stack}
-                  className="inline-flex rounded bg-white bg-opacity-10 p-1 text-sm text-accent-text"
-                >
-                  {stack}
-                </div>
-              ))}
-            </div>
           </div>
+          <div className="rounded-xl border border-accent-text/20 bg-gradient-to-r from-accent-text/[0.08] via-white/[0.04] to-transparent px-5 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+            <h2 className="text-[1.05rem] leading-8 text-accent-text md:text-[1.1rem]">
+              Text me to collab and make an impact. Let&apos;s make a dent in
+              the universise together!
+            </h2>
+          </div>
+          {projectStackSections.map((section) => (
+            <div
+              className="flex flex-col gap-y-2 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4"
+              key={section.title}
+            >
+              <h2 className="text-[0.95rem] uppercase tracking-[0.14em] text-white/90">
+                {section.title}
+              </h2>
+              <p className="text-[0.98rem] leading-8 text-white/68">
+                {section.items.join(", ")}.
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     );
@@ -466,13 +828,15 @@ export default function Search() {
                     <>
                       <h2>
                         <span className="bg-[#735B95] py-1">
-                          I connect research, real systems, and product delivery.
+                          I love connecting the dots. I care deeply about the
+                          future of AI, especially how it can bridge logic with
+                          emotion and creativity.
                         </span>
                       </h2>
                       <h2>
                         <span className="bg-[#735B95] py-1">
-                          I like work that has technical depth, visible impact, and
-                          enough room to build something differentiated.
+                          As a TEDx speaker, I&apos;ve shared ideas on building AI
+                          that feels more human, not just more powerful.
                         </span>
                       </h2>
                     </>
@@ -513,7 +877,13 @@ export default function Search() {
           </div>
 
           {displayQuery !== "why-hire-a-stephen" && (
-            <div className="hidden h-[40rem] w-1/3 flex-col gap-y-3 rounded-lg border-[0.05rem] border-white border-opacity-30 p-2 shadow-xl md:flex">
+            <div
+              className={`hidden w-1/3 shrink-0 flex-col gap-y-3 rounded-lg border-[0.05rem] border-white border-opacity-30 shadow-xl md:flex ${
+                isWorkExperience
+                  ? "self-start p-3"
+                  : "h-[40rem] overflow-y-auto p-2"
+              }`}
+            >
               <RightPanel />
             </div>
           )}

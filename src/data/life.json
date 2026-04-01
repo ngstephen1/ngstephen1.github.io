@@ -21,6 +21,23 @@
     ]
   },
   {
+    "title": "Community",
+    "alias": "vt-cro",
+    "iconSrc": "/search-img/vt-cro.png",
+    "bannerSrc": "/search-img/vt-cro.png",
+    "headline": "Virginia Tech Competitive Robotics Organization",
+    "timeline": "October 2023 - Present",
+    "searchDescription": "Virginia Tech's largest design team.",
+    "longDescription": "Mission\nImprove the presence of robotics at Virginia Tech and surrounding communities.",
+    "links": [
+      {
+        "name": "view website",
+        "url": "link-outline.svg",
+        "link": "https://www.vtcro.org"
+      }
+    ]
+  },
+  {
     "title": "Brave & Love",
     "alias": "brave-love",
     "imageAlias": "spont",

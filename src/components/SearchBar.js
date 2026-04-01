@@ -13,12 +13,12 @@ export default function SearchBar({ query }) {
   const path = usePathname();
 
   const searches = [
-    { search: "projects", param: "stephen-projects" },
     {
       search: "work experience",
       param: "work-experience",
       aliases: ["experience"],
     },
+    { search: "projects", param: "stephen-projects" },
     { search: "life", param: "life" },
     { search: "why hire me", param: "why-hire-a-stephen" },
   ];
@@ -143,6 +143,37 @@ export default function SearchBar({ query }) {
           </div>
         )}
       </div>
+
+      {path === "/" && (
+        <>
+          <div
+            className={`w-full transition-all duration-300 ${
+              showSearch
+                ? "h-[13.75rem] md:h-[14.25rem] lg:h-[14.75rem]"
+                : "h-[6.25rem] md:h-[6.75rem] lg:h-[7.25rem]"
+            }`}
+          />
+          <div className="w-11/12 md:w-2/3 lg:w-2/5">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3 text-center shadow-[0_12px_36px_rgba(0,0,0,0.1)] backdrop-blur-[2px] md:px-5">
+              <p className="text-sm leading-6 text-white/85 md:text-[1.02rem] md:leading-7">
+                I&apos;m looking for{" "}
+                <span className="text-accent-text">
+                  Summer 2026 Internship
+                </span>{" "}
+                &{" "}
+                <span className="text-accent-text">
+                  New Grad Roles in 2027
+                </span>
+                . Top choices are{" "}
+                <span className="text-white">
+                  AI Engineer, Software Engineer, Data Scientist/Engineer, Business Analyst
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

@@ -3,7 +3,7 @@
     "title": "Google DeepMind Research at Virginia Tech",
     "alias": "deepmind-research",
     "imageAlias": "research-sealqa",
-    "headline": "Student Researcher on SealQA, accepted to ICLR",
+    "headline": "AI Research, accepted to ICLR, cited by Microsoft, Amazon, 30+ others",
     "timeline": "Jan 2025 - Present",
     "type": "research",
     "searchDescription": "Built scalable RAG evaluation infrastructure with crawling, search-noise injection, retrieval, reranking, and GPU-backed vLLM pipelines.",
@@ -45,7 +45,7 @@
     "imageAlias": "marriott",
     "bannerSrc": "/search-img/marriott-banner.png",
     "descriptionFirst": true,
-    "headline": "Software Engineer building AI tooling and release-grade mobile QA",
+    "headline": "Software Engineer bringing product to life with AI",
     "timeline": "Jun 2025 - Dec 2025",
     "type": "product",
     "searchDescription": "Built AI translation tooling, test systems, and release workflows for the Marriott Bonvoy app used by 237M+ members.",
@@ -74,6 +74,7 @@
     "alias": "fpt",
     "imageAlias": "fpt",
     "bannerSrc": "/search-img/fpt-banner.jpg",
+    "descriptionFirst": true,
     "headline": "Artificial Intelligence Engineer Intern for multimodal design systems",
     "timeline": "May 2024 - Nov 2024",
     "type": "ai",
@@ -85,6 +86,11 @@
         "type": "image",
         "src": "/search-img/fpt-ai-art-1.png",
         "alt": "FPT AI art still"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/fpt-showcase.jpg",
+        "alt": "FPT showcase"
       },
       {
         "type": "image",
@@ -116,7 +122,7 @@
     "title": "Lovealot.Together",
     "alias": "lovealot",
     "imageAlias": "bumblebee",
-    "headline": "COO and data analyst for a 400K-follower creator operation",
+    "headline": "COO and Data Analyst for TikTok Channel",
     "timeline": "Sep 2022 - May 2025",
     "type": "growth",
     "searchDescription": "Built a TikTok ETL and analytics pipeline that processed 100K+ engagement signals across 10 countries and drove a 5% lift.",
@@ -136,7 +142,7 @@
     "alias": "virginia-tech-ta",
     "iconSrc": "/search-img/ta-virginia-tech.jpg",
     "bannerSrc": "/search-img/ta-virginia-tech.jpg",
-    "headline": "Teaching Assistant for CMDA courses",
+    "headline": "Inspiring the next gen of talents as a Teaching Assistant",
     "timeline": "Aug 2024 - Present",
     "type": "teaching",
     "searchDescription": "Supported CMDA 3654 and 1634 with Dr. Chris North, Dr. John Wenskovitch, and Dr. Eric Ufferman.",
@@ -177,11 +183,18 @@
     "title": "Hybrid Electric Vehicle Team",
     "alias": "hevt",
     "imageAlias": "renew",
-    "headline": "Data Engineer for real-time sensing and object tracking",
+    "headline": "Data Engineer for 30-year-old Autonomous Vehicle Team",
     "timeline": "Jan 2024 - Present",
     "type": "systems",
     "searchDescription": "Synchronized 20 sensors for real-time object tracking of the Cadillac Lyriq using Python, SQL, and ROS 2.",
     "longDescription": "On the Hybrid Electric Vehicle Team, I work on data systems that support real-time object tracking for the Cadillac Lyriq. I synchronized 20 sensors using Python, SQL, and ROS 2, helping a multidisciplinary engineering team operate with production-like hardware and reliability constraints.",
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/renew-banner.png",
+        "alt": "Hybrid Electric Vehicle Team vehicle"
+      }
+    ],
     "tech": ["Python", "SQL", "ROS 2", "Sensor Fusion", "Real-time Systems"],
     "links": []
   }
