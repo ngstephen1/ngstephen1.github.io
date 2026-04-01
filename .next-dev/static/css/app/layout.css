@@ -912,6 +912,11 @@ video {
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
 .self-start {
   align-self: flex-start;
 }
@@ -1075,6 +1080,9 @@ video {
 .bg-dark-purple-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(95 58 161 / var(--tw-bg-opacity, 1));
+}
+.bg-dark-purple-300\/25 {
+  background-color: rgb(95 58 161 / 0.25);
 }
 .bg-gray-900 {
   --tw-bg-opacity: 1;

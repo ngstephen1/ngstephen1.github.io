@@ -10,6 +10,7 @@ import life from "@/data/life.json";
 import whyHire from "@/data/why.json";
 import MyLanguagesChart from "./MyLanguagesChart";
 import KintsugiHeartsDreamDetail from "@/components/project-details/KintsugiHeartsDreamDetail";
+import VTCRODetail from "@/components/project-details/VTCRODetail";
 
 const projectStackSections = [
   {
@@ -430,6 +431,7 @@ function BadgeWall({ title, subtitle, items }) {
 
 const detailComponentByAlias = {
   "kintsugi-hearts-dream": KintsugiHeartsDreamDetail,
+  "vt-cro": VTCRODetail,
 };
 
 export default function Search() {
@@ -581,22 +583,24 @@ export default function Search() {
             className="relative flex h-full w-full flex-col gap-y-3 overflow-y-scroll overflow-x-hidden p-4 scroll-smooth"
             style={{ scrollbarWidth: "1" }}
           >
-            <div className="w-full overflow-hidden rounded-lg bg-black">
-              {data.videoEmbed ? (
-                <iframe
-                  className="aspect-video w-full"
-                  src={data.videoEmbed}
-                  title={`${data.title} video`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              ) : (
-                <div className="max-h-[52vh] w-full">
-                  <ResultVisual data={data} banner />
-                </div>
-              )}
-            </div>
+            {!data.hideHero && (
+              <div className="w-full overflow-hidden rounded-lg bg-black">
+                {data.videoEmbed ? (
+                  <iframe
+                    className="aspect-video w-full"
+                    src={data.videoEmbed}
+                    title={`${data.title} video`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="max-h-[52vh] w-full">
+                    <ResultVisual data={data} banner />
+                  </div>
+                )}
+              </div>
+            )}
 
             <h2 className="w-full text-2xl">{data.title}</h2>
 
@@ -630,9 +634,11 @@ export default function Search() {
               </div>
             )}
 
-            {data.descriptionFirst && (
+            {data.descriptionFirst && !!data.longDescription && (
               <div className="w-full font-thin">{data.longDescription}</div>
             )}
+
+            {DetailComponent && data.detailFirst && <DetailComponent />}
 
             {!!data.mediaFrames?.length && (
               <div className="flex w-full flex-col gap-3">
@@ -685,11 +691,11 @@ export default function Search() {
               </div>
             )}
 
-            {!data.descriptionFirst && (
+            {!data.descriptionFirst && !!data.longDescription && (
               <div className="w-full font-thin">{data.longDescription}</div>
             )}
 
-            {DetailComponent && <DetailComponent />}
+            {DetailComponent && !data.detailFirst && <DetailComponent />}
 
             {!!data.tech?.length && (
               <div className="flex w-full flex-row flex-wrap gap-2">
