@@ -1,86 +1,36 @@
-import React, { useRef, useEffect } from 'react';
-import Chart from 'chart.js/auto';
+const languageData = [
+  { label: "Python", value: 94, color: "#74C3F5" },
+  { label: "TypeScript", value: 56, color: "#E8E4E4" },
+  { label: "Java", value: 48, color: "#EF8A17" },
+  { label: "SQL", value: 44, color: "#F7D657" },
+  { label: "CUDA", value: 32, color: "#8E2DE2" },
+  { label: "Swift", value: 24, color: "#F04D37" },
+  { label: "Go", value: 18, color: "#4BE3A7" },
+];
 
-const MyLanguagesChart = () => {
-  const chartRef = useRef(null);
-
-  useEffect(() => {
-    if (!chartRef.current) return;
-
-    const ctx = chartRef.current.getContext('2d');
-
-    // Data for your horizontal bar chart
-    const labels = ['Python', 'SQL', 'MATLAB', 'Java', 'JavaScript', 'HTML', 'CSS'];
-    const usageData = [55.8, 10.0, 12.1, 14.5, 3.3, 2.1, 2.2]; // must total ~100
-
-    const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [
-          {
-            label: 'Usage (%)',
-            data: usageData,
-            backgroundColor: [
-              '#75BFEC', // Python
-              '#FAFA37', // SQL
-              '#F7F4F3', // MATLAB
-              '#e67e22', // Java
-              '#8a00c2', // JavaScript
-              '#e74c3c', // HTML
-              '#2ecc71'  // CSS
-            ]
-          }
-        ]
-      },
-      options: {
-        indexAxis: 'y', // horizontal bars
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            ticks: {
-              color: '#ffffff',
-              // Append '%' to the x-axis labels
-              callback: (value) => `${value}%`
-            },
-            grid: {
-              color: '#555'
-            }
-          },
-          y: {
-            ticks: {
-              color: '#ffffff'
-            },
-            grid: {
-              color: '#555'
-            }
-          }
-        },
-        plugins: {
-          legend: { display: false },
-          title: {
-            display: true,
-            text: 'Most Used Languages',
-            color: '#ffffff',
-            font: { size: 16 }
-          }
-        }
-      }
-    });
-
-    // Cleanup on component unmount
-    return () => {
-      myChart.destroy();
-    };
-  }, []);
-
-  // Style container so the chart has a dark background & correct sizing
+export default function MyLanguagesChart() {
   return (
-    <div className="w-full h-[17rem] rounded-t-lg bg-[#1e1e1e] p-4">
-      <canvas ref={chartRef} />
+    <div className="rounded-t-lg bg-[#262626] p-6 text-white">
+      <h2 className="mb-5 text-center text-2xl font-semibold">
+        Most Used Languages
+      </h2>
+      <div className="flex flex-col gap-y-3">
+        {languageData.map((item) => (
+          <div key={item.label} className="flex items-center gap-x-4">
+            <h3 className="w-20 text-right text-sm font-medium">{item.label}</h3>
+            <div className="h-6 flex-1 overflow-hidden rounded-sm border border-[#5A5A5A]">
+              <div
+                className="h-full"
+                style={{
+                  width: `${item.value}%`,
+                  backgroundColor: item.color,
+                }}
+              />
+            </div>
+            <h3 className="w-10 text-xs">{item.value}%</h3>
+          </div>
+        ))}
+      </div>
     </div>
   );
-};
-
-export default MyLanguagesChart;
+}

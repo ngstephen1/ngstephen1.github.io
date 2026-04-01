@@ -8,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-purple": {  
-          100: "#1F0A3C",  // deep cosmic purple
-          200: "#3A1E70",  // rich mid-tone purple
-          300: "#5F3AA1"   // vibrant neon-inflected purple
+        "dark-purple": {
+          100: "#1F0A3C",
+          200: "#3A1E70",
+          300: "#5F3AA1",
         },
-        "accent-text": "#D8B7FF",  // soft lavender for text accents
-        "accent-color": "#779ECB", // search bar color
-        "search-blue": "#29B6F6"   // electric blue for interactive elements
+        "accent-text": "#D8B7FF",
+        "accent-color": "#779ECB",
+        "search-blue": "#29B6F6",
       },
       fontFamily: {
         roboto: ["var(--font-roboto)", "sans-serif"],
@@ -25,4 +25,3 @@ export default {
   },
   plugins: [],
 };
-

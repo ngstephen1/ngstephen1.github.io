@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import SearchBar from "./SearchBar";
@@ -9,71 +10,65 @@ export default function Header({ setShowMailer }) {
   const [showMenu, setShowMenu] = useState(false);
   const [linkMenu, setLinkMenu] = useState(false);
   const [profileMenu, setProfileMenu] = useState(false);
-  const [textCopy, setIsCopy] = useState(false);
+  const [textCopy, setTextCopy] = useState(false);
   const menuRef = useRef(null);
   const linkRef = useRef(null);
   const profileRef = useRef(null);
 
   const searchParams = useSearchParams();
   const query = searchParams.get("q");
-  const displayQuery = query ? query : "";
+  const displayQuery = query || "";
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText("npnallstar@gmail.com");
-      setIsCopy(true);
+      await navigator.clipboard.writeText("stephenallstar24@vt.edu");
+      setTextCopy(true);
       setTimeout(() => {
-        setIsCopy(false);
-      }, 4000);
-    } catch (err) {
-      console.error("Failed to copy text: ", err);
+        setTextCopy(false);
+      }, 3000);
+    } catch (error) {
+      console.error("Failed to copy text:", error);
     }
   };
 
   const externalLinks = [
     { text: "code", icon: "github.svg", url: "https://github.com/ngstephen1" },
     {
-      text: "explore",
-      icon: "x.svg",
-      url: "https://x.com/",
-    },
-    {
       text: "connect",
       icon: "linkedin.svg",
       url: "https://www.linkedin.com/in/nguyenpn1/",
+    },
+    {
+      text: "Hackathon",
+      icon: "articles.svg",
+      url: "https://devpost.com/stephenallstar24",
+    },
+    {
+      text: "card",
+      icon: "link-outline.svg",
+      url: "https://dot.cards/steegle",
     },
     {
       text: "resume",
       icon: "resumeicon.png",
       url: "https://docs.google.com/document/d/10SzxbVKTdz6fP6wTFl4gU7gxC80E4v6y/edit",
     },
-    {
-      text: "articles",
-      icon: "ai-brain.png",
-      url: "https://stephenmusaic.substack.com",
-    },
   ];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Close menu if the click is outside the menu, but not inside the linkRef or profileRef
-      if (
-        showMenu &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !linkRef.current.contains(event.target) &&
-        !profileRef.current.contains(event.target)
-      ) {
+      const clickedMenu = menuRef.current?.contains(event.target);
+      const clickedLink = linkRef.current?.contains(event.target);
+      const clickedProfile = profileRef.current?.contains(event.target);
+
+      if (showMenu && !clickedMenu && !clickedLink && !clickedProfile) {
         setShowMenu(false);
         setProfileMenu(false);
         setLinkMenu(false);
       }
     };
 
-    // Add event listener for clicks outside
     document.addEventListener("click", handleClickOutside);
-
-    // Cleanup on component unmount
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -81,26 +76,26 @@ export default function Header({ setShowMailer }) {
 
   return (
     <div
-      className={`flex   ${
-        path !== "/" ? "flex-col-reverse " : "flex-row"
-      } gap-y-2 w-full md:flex-row justify-between items-center font-ropaSans text-accent-text p-4 ${
-        (path !== "/" && "pt-8") || "pl-10"
-      }  md:pl-16 relative`}
+      className={`flex ${
+        path !== "/" ? "flex-col-reverse" : "flex-row"
+      } relative w-full items-center justify-between gap-y-2 p-4 font-ropaSans text-accent-text md:flex-row ${
+        path !== "/" ? "pt-8 md:pl-16" : "pl-10 md:pl-16"
+      }`}
     >
       <div
         style={{ zIndex: 40 }}
         className={`flex ${
           path !== "/" ? "flex-col" : "flex-row"
-        } w-full md:flex-row gap-x-5 items-center`}
+        } w-full items-center gap-x-5 md:flex-row`}
       >
         {(path !== "/" && (
-          <Link href="/" className="text-white text-2xl hidden md:block">
+          <Link href="/" className="hidden text-2xl text-white md:block">
             (Stee)gle
           </Link>
         )) || (
           <Link
             href="/about"
-            className="cursor-pointer hover:opacity-70 transform transition-all duration-300 "
+            className="cursor-pointer transition-all duration-300 hover:opacity-70"
           >
             About
           </Link>
@@ -111,12 +106,13 @@ export default function Header({ setShowMailer }) {
 
       <div className="flex flex-row items-center justify-center gap-x-5">
         {path !== "/" && (
-          <Link href="/" className={`text-white text-2xl block md:hidden`}>
+          <Link href="/" className="block text-2xl text-white md:hidden">
             (Stee)gle
           </Link>
         )}
+
         <div
-          className="cursor-pointer hover:opacity-70 transform transition-all duration-300"
+          className="cursor-pointer transition-all duration-300 hover:opacity-70"
           onClick={() => setShowMailer(true)}
         >
           Gmail
@@ -127,15 +123,15 @@ export default function Header({ setShowMailer }) {
             setLinkMenu(!linkMenu);
             profileMenu ? setShowMenu(true) : setShowMenu(!showMenu);
             setProfileMenu(false);
-          }} // Toggle onClick
-          className={`w-10 h-10 flex items-center justify-center rounded-full ${
-            (linkMenu && "rounded-full  bg-white bg-opacity-20") ||
+          }}
+          className={`flex h-10 w-10 items-center justify-center rounded-full transition-all duration-300 ${
+            (linkMenu && "bg-white bg-opacity-20") ||
             "hover:bg-white hover:bg-opacity-10"
-          } transform transition-all duration-300`}
+          }`}
           ref={linkRef}
         >
           <div
-            className="bg-no-repeat w-6 h-6 bg-cover cursor-pointer"
+            className="h-6 w-6 cursor-pointer bg-cover bg-no-repeat"
             style={{ backgroundImage: "url(icons/menu.svg)" }}
           />
         </div>
@@ -148,7 +144,7 @@ export default function Header({ setShowMailer }) {
             setLinkMenu(false);
           }}
           ref={profileRef}
-          className="rounded-full bg-no-repeat bg-cover w-8 h-8 cursor-pointer"
+          className="h-8 w-8 cursor-pointer rounded-full bg-cover bg-no-repeat"
         />
 
         {showMenu && (
@@ -157,29 +153,21 @@ export default function Header({ setShowMailer }) {
             style={{ zIndex: 90 }}
             className={`absolute ${
               (linkMenu &&
-                `grid grid-cols-3 right-5 ${
-                  path !== "/"
-                    ? "-bottom-[12rem] md:-bottom-[16.5rem]"
-                    : "-bottom-[16.5rem]"
-                }`) ||
+                "right-4 top-full mt-3 grid w-[calc(100vw-2rem)] max-w-[18rem] grid-cols-2") ||
               (profileMenu &&
-                `flex flex-col right-5 ${
-                  path !== "/"
-                    ? "-bottom-[20.5rem] md:-bottom-[24.5rem]"
-                    : " -bottom-[24.5rem]"
-                }`)
-            } bg-dark-purple-200 border border-[0.5rem]  border-accent-color  rounded-[1.5rem] p-6 gap-6`}
+                "right-4 top-full mt-3 flex w-[calc(100vw-2rem)] max-w-[22rem] flex-col")
+            } max-h-[calc(100vh-6rem)] gap-6 overflow-y-auto rounded-[1.5rem] border border-[0.5rem] border-accent-color bg-dark-purple-200 p-6`}
           >
             {linkMenu &&
-              externalLinks.map((link, idx) => (
+              externalLinks.map((link) => (
                 <Link
-                  key={idx}
+                  key={link.text}
                   href={link.url}
                   target="_blank"
-                  className="flex flex-col items-center hover:bg-white hover:bg-opacity-5 px-4 py-2 rounded-lg transform transition ease-out duration-200"
+                  className="flex flex-col items-center rounded-lg px-4 py-2 transition duration-200 ease-out hover:bg-white hover:bg-opacity-5"
                 >
                   <div
-                    className="bg-no-repeat bg-cover w-12 h-12"
+                    className="h-12 w-12 bg-cover bg-no-repeat"
                     style={{ backgroundImage: `url(icons/${link.icon})` }}
                   />
                   <h2>{link.text}</h2>
@@ -187,12 +175,12 @@ export default function Header({ setShowMailer }) {
               ))}
 
             {profileMenu && (
-              <div className="flex flex-col w-full">
-                <div className="flex flex-row w-full gap-x-10 justify-end">
+              <div className="flex w-full flex-col">
+                <div className="flex w-full flex-row justify-end gap-x-10">
                   <div className="flex flex-row">
-                    <h2>npnallstar@gmail.com</h2>
+                    <h2>stephenallstar24@vt.edu</h2>
                     <div
-                      className="bg-no-repeat bg-cover w-5 h-5 cursor-pointer"
+                      className="h-5 w-5 cursor-pointer bg-cover bg-no-repeat"
                       onClick={handleCopy}
                       style={{
                         backgroundImage: textCopy
@@ -202,60 +190,57 @@ export default function Header({ setShowMailer }) {
                     />
                   </div>
                   <div
-                    className="bg-no-repeat bg-cover w-5 h-5 cursor-pointer"
+                    className="h-5 w-5 cursor-pointer bg-cover bg-no-repeat"
                     onClick={() => {
-                      setProfileMenu(!profileMenu);
-                      setShowMenu(!showMenu);
+                      setProfileMenu(false);
+                      setShowMenu(false);
                       setLinkMenu(false);
                     }}
                     style={{ backgroundImage: "url(icons/exit.svg)" }}
                   />
                 </div>
-                <div className="flex flex-row w-full">
+
+                <div className="flex w-full flex-row">
                   <h2
                     className={`${
                       textCopy ? "visible" : "invisible"
-                    } text-xs text-center w-full text-white mb-4`}
+                    } mb-4 w-full text-center text-xs text-white`}
                   >
                     email copied successfully!
                   </h2>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                <div className="flex flex-col items-center justify-center">
                   <div
                     style={{ backgroundImage: "url(head-shot.png)" }}
-                    className="rounded-full bg-no-repeat bg-cover w-24 h-24 cursor-pointer"
+                    className="h-24 w-24 cursor-pointer rounded-full bg-cover bg-no-repeat"
                   />
-                  <h2 className="text-xl">Hi, I'm Stephen</h2>
+                  <h2 className="text-xl">Hi, I&apos;m Nguyen</h2>
                 </div>
-                <div className="flex flex-col font-ropaSans-light text-md gap-y-5">
-                  <h2 className="text-center">
-                    Welcome to my personal space! 🎶
-                  </h2>
+
+                <div className="flex flex-col gap-y-4 text-md">
+                  <h2 className="text-center">AI / ML engineer and builder.</h2>
 
                   <div className="flex flex-col">
-                    {" "}
                     <h2 className="text-sm text-white">HOW TO USE</h2>
                     <h2>
-                      Explore my projects and journey using{" "}
-                      <span className="italic text-white">Search </span>
+                      Explore my projects and work experience using{" "}
+                      <span className="italic text-white">Search</span>
                     </h2>
                     <h2>
                       Send me a message using{" "}
-                      <span className="italic text-white">Gmail</span>{" "}
+                      <span className="italic text-white">Gmail</span>
                     </h2>
                     <h2>
-                      View more of my work using the{" "}
+                      Open my links using the{" "}
                       <span className="italic text-white">Dot-Menu</span>
                     </h2>
-                    <h2 className="flex flex-row gap-x-1 items-center">
-                      Book a call using{" "}
-                      <span className="italic text-white flex inline-flex self-center ">
+                    <h2 className="flex flex-row items-center gap-x-1">
+                      Open my contact card using{" "}
+                      <span className="inline-flex self-center italic text-white">
                         <div
-                          className="bg-no-repeat w-5 h-5 bg-cover"
-                          style={{
-                            backgroundImage: "url(icons/calendar.svg)",
-                          }}
+                          className="h-5 w-5 bg-cover bg-no-repeat"
+                          style={{ backgroundImage: "url(icons/calendar.svg)" }}
                         />
                       </span>
                     </h2>

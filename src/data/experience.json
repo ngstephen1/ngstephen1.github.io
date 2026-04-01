@@ -1,38 +1,188 @@
 [
   {
-    "title": "Virginia Tech Department of Computer Science",
-    "alias": "symbiotic",
-    "headline": "Quality Engineering Intern",
-    "timeline": "present",
-    "searchDescription": "Engineering the next tool to help doctors revascularization decisons",
-    "longDescription": "At Symbiotic AI I'm helping develop V1 of Revaz AI. Learned lots about AWS, including SES, Amplify, S3, and EC2. Designed and then developed the waitlist site for the AI product."
+    "title": "Google DeepMind Research at Virginia Tech",
+    "alias": "deepmind-research",
+    "imageAlias": "research-sealqa",
+    "headline": "Student Researcher on SealQA, accepted to ICLR",
+    "timeline": "Jan 2025 - Present",
+    "type": "research",
+    "searchDescription": "Built scalable RAG evaluation infrastructure with crawling, search-noise injection, retrieval, reranking, and GPU-backed vLLM pipelines.",
+    "longDescription": "Researching with Dr. Tu Vu at the intersection of search and large language models. I am the second author on SealQA, accepted to ICLR. My work focuses on scalable evaluation for search-engine-augmented LLMs, including data crawling, search-noise injection, retrieval, reranking, and multi-document reasoning. I also released the associated dataset on Hugging Face, where it reached 20K downloads, and built a GPU vLLM pipeline that can reason across documents, query tables through SQL, and generate structured tables.",
+    "tech": ["Python", "RAG", "vLLM", "SQL", "Hugging Face", "Evaluation"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/research-sealqa-frame-1.png",
+        "alt": "SealQA research figure 1"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/research-sealqa-frame-2.png",
+        "alt": "SealQA research figure 2"
+      }
+    ],
+    "links": [
+      {
+        "name": "my research advisor",
+        "url": "link-outline.svg",
+        "link": "https://tuvllms.github.io/"
+      },
+      {
+        "name": "paper",
+        "url": "articles.svg",
+        "link": "https://arxiv.org/abs/2506.01062"
+      },
+      {
+        "name": "dataset",
+        "url": "link-outline.svg",
+        "link": "https://huggingface.co/datasets/vtllms/sealqa"
+      }
+    ]
   },
-
+  {
+    "title": "Marriott International",
+    "alias": "marriott",
+    "imageAlias": "marriott",
+    "bannerSrc": "/search-img/marriott-banner.png",
+    "descriptionFirst": true,
+    "headline": "Software Engineer building AI tooling and release-grade mobile QA",
+    "timeline": "Jun 2025 - Dec 2025",
+    "type": "product",
+    "searchDescription": "Built AI translation tooling, test systems, and release workflows for the Marriott Bonvoy app used by 237M+ members.",
+    "longDescription": "At Marriott, I created an AI Translator system that reduced roughly 20 seconds per app translation by optimizing browser workflows with Azure OpenAI. I built and analyzed JUnit, regression, and automated end-to-end tests for the Marriott Bonvoy app, helping support a mobile product with 237M+ members. I also shipped Android v10.55 and iOS v10.87 using Eclipse, BrowserStack, QMetry, Harness, and Jira, and prototyped a real-time AI testing assistant that uses computer vision to detect screens, run iOS flows, and verify on-screen results.",
+    "tech": ["Azure OpenAI", "JUnit", "BrowserStack", "QMetry", "Harness", "Jira", "Kotlin", "Swift", "Adobe Analytics", "BDD", "GitHub Copilot", "Automated Software Testing"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/marriott-ceo-and-me.jpg",
+        "alt": "Picture of me and CEO Anthony Capuano",
+        "caption": "picture of me and CEO Anthony Capuano",
+        "layout": "compact"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/marriott-intern-cohort.jpg",
+        "alt": "Marriott International interns summer 2025",
+        "caption": "Marriott International interns summer 2025",
+        "layout": "compact"
+      }
+    ],
+    "links": []
+  },
   {
     "title": "FPT Software",
-    "alias": "meetmidway",
-    "headline": "Artificial Intelligence Intern",
-    "timeline": "May 2024 - Oct 2024",
-    "type": "startup",
-    "searchDescription": "Advisor: Dr. Tu Vu, Faculty Researcher at Google Gemini (tuvllms.github.io)",
-    "longDescription": "Research Topic: Search Engine Augmented Large Language Models"
+    "alias": "fpt",
+    "imageAlias": "fpt",
+    "bannerSrc": "/search-img/fpt-banner.jpg",
+    "headline": "Artificial Intelligence Engineer Intern for multimodal design systems",
+    "timeline": "May 2024 - Nov 2024",
+    "type": "ai",
+    "searchDescription": "Built CV and NLP systems for architecture design generation and led AI art work for a UNESCO-partnered festival.",
+    "longDescription": "At FPT Software, I built and integrated computer vision and NLP models that generated architecture designs from client requirements. I also led 5 interns to secure AI-generated art for a construction team, and that work was used in a UNESCO-partnered art festival. The role sharpened both my technical execution and my ability to coordinate creative AI work under real delivery pressure.",
+    "tech": ["Python", "Computer Vision", "NLP", "Generative AI", "Leadership"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/fpt-ai-art-1.png",
+        "alt": "FPT AI art still"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/fpt-meetmidway.png",
+        "alt": "FPT additional showcase"
+      },
+      {
+        "type": "video",
+        "src": "/search-img/ai-mosaic-art-demo-1.mp4",
+        "alt": "AI Mosaic Art Demo",
+        "layout": "compact"
+      },
+      {
+        "type": "video",
+        "src": "/search-img/ai-mosaic-art-demo-2.mp4",
+        "alt": "AI Mosaic Art Demo 2",
+        "layout": "compact"
+      },
+      {
+        "type": "video",
+        "src": "/search-img/ai-mosaic-pillar.mov",
+        "alt": "AI Mosaic Pillar",
+        "layout": "compact"
+      }
+    ],
+    "links": []
   },
   {
-    "title": "Generative AI Project: Singing Voice Synthesis",
-    "alias": "Software Engineer",
-    "headline": "Research Assistant",
-    "timeline": "Nov 2023 - Mar 2024",
-    "type": "startup",
-    "searchDescription": "Leading North America's full-service technology, advisory and software development companies",
-    "longDescription": "My first internship in a corporate environment - I revamped the recruitment screen and made beyond the expecations of my role by creating a game to help you decide how you'd best fit into the company. Learned lots about scrum. "
+    "title": "Lovealot.Together",
+    "alias": "lovealot",
+    "imageAlias": "bumblebee",
+    "headline": "COO and data analyst for a 400K-follower creator operation",
+    "timeline": "Sep 2022 - May 2025",
+    "type": "growth",
+    "searchDescription": "Built a TikTok ETL and analytics pipeline that processed 100K+ engagement signals across 10 countries and drove a 5% lift.",
+    "longDescription": "As Chief Operating Officer and Data Analyst at Lovealot.Together, I built a TikTok ETL and analytics pipeline in Python and SQL that processed more than 100K engagement signals across 10 countries. That system improved content decision-making, helped drive a 5% engagement lift through automation, and supported partnerships with Vietnam’s #1 pay TV provider.",
+    "tech": ["Python", "SQL", "ETL", "Analytics", "Growth", "TikTok"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/lovealot-detail.png",
+        "alt": "Lovealot Together detail"
+      }
+    ],
+    "links": []
   },
   {
-    "title": "Lovealot.Together (400K followers and 22M+ likes on TikTok)",
-    "alias": "Chief Operating Officer & Data Analyst",
-    "headline": "Chief Operating Officer & Data Analyst",
-    "timeline": "Sep 2022 - Present",
-    "type": "startup",
-    "searchDescription": "Analyzed the TikTok algorithm and viewing data to create videos tailored to viewers' interests across 10 countries.",
-    "longDescription": "Implemented a Selenium bot to like comments, increasing daily viewer interactions by 5% and improving retention. Secured a paid partnership with Vietnam’s number 1 pay TV provider, promoting products for 10+ brands."
+    "title": "Virginia Tech",
+    "alias": "virginia-tech-ta",
+    "iconSrc": "/search-img/ta-virginia-tech.jpg",
+    "bannerSrc": "/search-img/ta-virginia-tech.jpg",
+    "headline": "Teaching Assistant for CMDA courses",
+    "timeline": "Aug 2024 - Present",
+    "type": "teaching",
+    "searchDescription": "Supported CMDA 3654 and 1634 with Dr. Chris North, Dr. John Wenskovitch, and Dr. Eric Ufferman.",
+    "longDescription": "Teaching Assistant for CMDA 3654 and CMDA 1634 at Virginia Tech. I support course delivery alongside Dr. Chris North, Dr. John Wenskovitch, and Dr. Eric Ufferman, helping students engage with quantitative, computational, and data-focused coursework in a more hands-on way.",
+    "tech": ["Teaching", "CMDA 3654", "CMDA 1634", "Data Science", "Student Support"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/ta-virginia-tech.jpg",
+        "alt": "Virginia Tech teaching assistant"
+      },
+      {
+        "type": "video",
+        "src": "/search-img/ta-vt-vid.mp4",
+        "alt": "Virginia Tech teaching assistant video",
+        "layout": "compact"
+      }
+    ],
+    "links": [
+      {
+        "name": "Dr. Chris North",
+        "url": "link-outline.svg",
+        "link": "https://people.cs.vt.edu/north/"
+      },
+      {
+        "name": "Dr. John Wenskovitch",
+        "url": "link-outline.svg",
+        "link": "https://sanghani.cs.vt.edu/people/our-team/faculty/john-wenskovitch.html"
+      },
+      {
+        "name": "Dr. Eric Ufferman",
+        "url": "link-outline.svg",
+        "link": "https://math.vt.edu/people/faculty/ufferman-eric.html"
+      }
+    ]
+  },
+  {
+    "title": "Hybrid Electric Vehicle Team",
+    "alias": "hevt",
+    "imageAlias": "renew",
+    "headline": "Data Engineer for real-time sensing and object tracking",
+    "timeline": "Jan 2024 - Present",
+    "type": "systems",
+    "searchDescription": "Synchronized 20 sensors for real-time object tracking of the Cadillac Lyriq using Python, SQL, and ROS 2.",
+    "longDescription": "On the Hybrid Electric Vehicle Team, I work on data systems that support real-time object tracking for the Cadillac Lyriq. I synchronized 20 sensors using Python, SQL, and ROS 2, helping a multidisciplinary engineering team operate with production-like hardware and reliability constraints.",
+    "tech": ["Python", "SQL", "ROS 2", "Sensor Fusion", "Real-time Systems"],
+    "links": []
   }
 ]

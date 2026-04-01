@@ -1,10 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: 'export',
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants.js";
+
+export default function nextConfig(phase) {
+  return {
+    distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next-dev" : ".next",
+    output: "export",
     images: {
       unoptimized: true,
     },
   };
-  
-  export default nextConfig;
+}
   

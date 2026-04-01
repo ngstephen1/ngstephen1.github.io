@@ -1,21 +1,27 @@
 "use client";
-import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function SearchBar({ query }) {
   const [search, setSearch] = useState("Search (Stee)gle");
   const [showSearch, setShowSearch] = useState(false);
-  const dropdownRef = useRef(null);
-  const searches = [
-    { search: "stephen's projects", param: "stephen-projects" },
-    { search: "life", param: "life" },
-    { search: "why hire a stephen", param: "why-hire-a-stephen" },
-  ];
-  const path = usePathname();
-
   const [tooltip, setTooltip] = useState(false);
   const [tooltip2, setTooltip2] = useState(false);
+  const dropdownRef = useRef(null);
+  const path = usePathname();
+
+  const searches = [
+    { search: "projects", param: "stephen-projects" },
+    {
+      search: "work experience",
+      param: "work-experience",
+      aliases: ["experience"],
+    },
+    { search: "life", param: "life" },
+    { search: "why hire me", param: "why-hire-a-stephen" },
+  ];
 
   useEffect(() => {
     setShowSearch(false);
@@ -24,7 +30,7 @@ export default function SearchBar({ query }) {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowSearch(false); // Close the dropdown
+        setShowSearch(false);
       }
     };
 
@@ -36,27 +42,28 @@ export default function SearchBar({ query }) {
 
   return (
     <div
-      className={`flex flex-col items-center w-full gap-y-6 font-ropaSans ${
+      className={`flex w-full flex-col items-center gap-y-6 font-ropaSans ${
         path === "/" && "relative"
       }`}
       style={{ zIndex: 80 }}
     >
       {path === "/" && (
-        <h2 className="text-white text-6xl lg:text-7xl xl:text-8xl absolute -top-20 lg:-top-28">
+        <h2 className="absolute -top-20 text-6xl text-white lg:-top-28 lg:text-7xl xl:text-8xl">
           (Stee)gle
         </h2>
       )}
 
       <div
-        ref={dropdownRef} // Attach ref to the dropdown container
-        className={`flex flex-col items-center shadow-lg ${
-          (path !== "/" && "md:absolute w-full top-6 left-48 md:w-2/5 ") ||
-          "absolute w-11/12 md:w-2/3 lg:w-2/5"
-        } ${showSearch ? "rounded-3xl" : "rounded-full"} py-2 bg-accent-color`}
+        ref={dropdownRef}
+        className={`absolute flex flex-col items-center bg-accent-color py-2 shadow-lg ${
+          path !== "/"
+            ? "left-0 top-6 w-full md:absolute md:left-48 md:w-2/5"
+            : "w-11/12 md:w-2/3 lg:w-2/5"
+        } ${showSearch ? "rounded-3xl" : "rounded-full"}`}
       >
-        <div className="flex items-center w-full px-4">
+        <div className="flex w-full items-center px-4">
           <div
-            className="bg-no-repeat w-5 h-5 bg-cover"
+            className="h-5 w-5 bg-cover bg-no-repeat"
             style={{
               backgroundImage: showSearch
                 ? "url(icons/arrow.svg)"
@@ -64,65 +71,70 @@ export default function SearchBar({ query }) {
             }}
             onClick={() => setShowSearch(!showSearch)}
           />
+
           <div
-            className={`flex-grow px-4 py-2 bg-accent-color focus:outline-none ${
+            className={`flex-grow bg-accent-color px-4 py-2 focus:outline-none ${
               search === "Search (Stee)gle" ? "text-accent-text" : "text-white"
             }`}
             onClick={() => setShowSearch(!showSearch)}
           >
-            {(query && searches.find((item) => item.param === query)?.search) ||
+            {(query &&
+              searches.find(
+                (item) =>
+                  item.param === query || item.aliases?.includes(query)
+              )?.search) ||
               search}
           </div>
 
-          <div className="flex flex-row justify-center items-center gap-x-2">
+          <div className="flex flex-row items-center justify-center gap-x-2">
             <div
-              className="bg-no-repeat w-5 h-5 bg-cover cursor-pointer"
-              onMouseEnter={() => setTooltip2(!tooltip2)}
-              onMouseLeave={() => setTooltip2(!tooltip2)}
+              className="h-5 w-5 cursor-pointer bg-cover bg-no-repeat"
+              onMouseEnter={() => setTooltip2(true)}
+              onMouseLeave={() => setTooltip2(false)}
               style={{ backgroundImage: "url(icons/microphone.svg)" }}
             />
             <Link
-              className="bg-no-repeat w-5 h-5 bg-cover"
-              href={"https://calendly.com"}
+              className="h-5 w-5 bg-cover bg-no-repeat"
+              href="https://dot.cards/steegle"
               target="_blank"
-              onMouseEnter={() => setTooltip(!tooltip)}
-              onMouseLeave={() => setTooltip(!tooltip)}
+              onMouseEnter={() => setTooltip(true)}
+              onMouseLeave={() => setTooltip(false)}
               style={{ backgroundImage: "url(icons/calendar.svg)" }}
             />
+
             <div
-              className={`bg-[#15131B] hidden md:${
-                tooltip ? "block" : "hidden"
-              } text-white absolute p-2 rounded-xl px-4 text-xs text-nowrap border border-accent-text border-opacity-40 top-12`}
+              className={`absolute top-12 rounded-xl border border-accent-text border-opacity-40 bg-[#15131B] p-2 px-4 text-xs text-nowrap text-white ${
+                tooltip ? "hidden md:block" : "hidden"
+              }`}
             >
-              book a call
+              open contact card
             </div>
+
             <div
-              className={`bg-[#15131B] hidden md:${
-                tooltip2 ? "block" : "hidden"
-              } text-white absolute p-2 rounded-xl px-4 text-xs text-nowrap border border-accent-text border-opacity-40 top-12`}
+              className={`absolute top-12 rounded-xl border border-accent-text border-opacity-40 bg-[#15131B] p-2 px-4 text-xs text-nowrap text-white ${
+                tooltip2 ? "hidden md:block" : "hidden"
+              }`}
             >
-              sing to the mic
+              singer mode coming soon
             </div>
           </div>
         </div>
 
         {showSearch && (
           <div className="w-full">
-            <div className="border-b border-accent-text mx-4" />
-            <h2 className="px-4 font-semibold text-md text-accent-text mt-2">
+            <div className="mx-4 border-b border-accent-text" />
+            <h2 className="mt-2 px-4 text-md font-semibold text-accent-text">
               Trending searches
             </h2>
-            {searches.map((item, idx) => (
+            {searches.map((item) => (
               <Link
-                className="px-4 flex flex-row items-center w-full gap-x-2 text-[#E5DFFF] py-2 rounded-lg hover:bg-white hover:bg-opacity-5 transform transition ease-out duration-200"
+                className="flex w-full flex-row items-center gap-x-2 rounded-lg px-4 py-2 text-[#E5DFFF] transition duration-200 ease-out hover:bg-white hover:bg-opacity-5"
                 href={`/search?q=${encodeURIComponent(item.param)}`}
-                key={idx}
-                onClick={() => {
-                  setShowSearch(false); // Hide dropdown
-                }}
+                key={item.param}
+                onClick={() => setShowSearch(false)}
               >
                 <div
-                  className="bg-no-repeat w-5 h-3 bg-cover"
+                  className="h-3 w-5 bg-cover bg-no-repeat"
                   style={{ backgroundImage: "url(icons/trending.svg)" }}
                 />
                 {item.search}
