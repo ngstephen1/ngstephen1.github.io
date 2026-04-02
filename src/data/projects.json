@@ -156,7 +156,13 @@
         "alt": "Deloitte Data Competition 2026 flowchart"
       }
     ],
-    "links": []
+    "links": [
+      {
+        "name": "live demo",
+        "url": "link-outline.svg",
+        "link": "https://drive.google.com/file/d/1kNHGxJAE6vqOSRZh5C9KcbReI0wSt5fB/view"
+      }
+    ]
   },
   {
     "title": "Noteshell",

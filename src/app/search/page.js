@@ -11,6 +11,7 @@ import whyHire from "@/data/why.json";
 import MyLanguagesChart from "./MyLanguagesChart";
 import KintsugiHeartsDreamDetail from "@/components/project-details/KintsugiHeartsDreamDetail";
 import VTCRODetail from "@/components/project-details/VTCRODetail";
+import DeloitteDataCompetitionDetail from "@/components/project-details/DeloitteDataCompetitionDetail";
 
 const projectStackSections = [
   {
@@ -432,6 +433,7 @@ function BadgeWall({ title, subtitle, items }) {
 const detailComponentByAlias = {
   "kintsugi-hearts-dream": KintsugiHeartsDreamDetail,
   "vt-cro": VTCRODetail,
+  "deloitte-data-competition": DeloitteDataCompetitionDetail,
 };
 
 export default function Search() {

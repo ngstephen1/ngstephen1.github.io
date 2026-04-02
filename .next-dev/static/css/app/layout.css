@@ -1379,6 +1379,9 @@ video {
 .tracking-\[0\.18em\] {
   letter-spacing: 0.18em;
 }
+.tracking-\[0\.24em\] {
+  letter-spacing: 0.24em;
+}
 .tracking-\[0\.2em\] {
   letter-spacing: 0.2em;
 }
@@ -1416,6 +1419,9 @@ video {
 .text-search-blue {
   --tw-text-opacity: 1;
   color: rgb(41 182 246 / var(--tw-text-opacity, 1));
+}
+.text-search-blue\/80 {
+  color: rgb(41 182 246 / 0.8);
 }
 .text-white {
   --tw-text-opacity: 1;
