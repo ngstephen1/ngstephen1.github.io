@@ -147,6 +147,12 @@
     "mediaFrames": [
       {
         "type": "image",
+        "src": "/search-img/deloitte-plot.png",
+        "alt": "Deloitte bank data visualization in Tableau",
+        "caption": "using tableau to explore bank data across the US"
+      },
+      {
+        "type": "image",
         "src": "/search-img/alexa-connect-banner.png",
         "alt": "Deloitte Data Competition 2024 presentation"
       },
