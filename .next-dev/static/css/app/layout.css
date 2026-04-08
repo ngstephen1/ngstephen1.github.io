@@ -1084,6 +1084,9 @@ video {
 .bg-dark-purple-300\/25 {
   background-color: rgb(95 58 161 / 0.25);
 }
+.bg-dark-purple-300\/30 {
+  background-color: rgb(95 58 161 / 0.3);
+}
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
@@ -1113,9 +1116,6 @@ video {
 }
 .bg-white\/\[0\.05\] {
   background-color: rgb(255 255 255 / 0.05);
-}
-.bg-dark-purple-300\/30 {
-  background-color: rgb(95 58 161 / 0.3);
 }
 .bg-opacity-0 {
   --tw-bg-opacity: 0;
