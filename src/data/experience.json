@@ -7,7 +7,7 @@
     "headline": "AI Research, accepted to ICLR, cited by Microsoft, Amazon, 30+ others",
     "timeline": "Jan 2025 - Present",
     "type": "research",
-    "searchDescription": "Built scalable RAG evaluation infrastructure with crawling, search-noise injection, retrieval, reranking, and GPU-backed vLLM pipelines.",
+    "searchDescription": "Frontier LLMs perform poorly on SealQA. Scalable RAG evaluation infrastructure with crawling, search-noise injection, retrieval, reranking.",
     "highlightText": "Researching with Dr. Tu Vu at the intersection of search and large language models. I am the second author on SealQA, accepted to ICLR. Our work focuses on scalable evaluation for search-engine-augmented LLMs, including data crawling, search-noise injection, retrieval, reranking, and multi-document reasoning. We also released the associated dataset on Hugging Face, where it reached about 20K downloads.",
     "longDescription": "",
     "tech": ["Python", "RAG", "Search LLMs", "Agentic Tools"],
