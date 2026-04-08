@@ -49,8 +49,11 @@
     "headline": "π^2: Structure-Originated Reasoning Data Improves Long-Context Reasoning Ability of Large Language Models",
     "timeline": "Jan 2025 - Present",
     "type": "research",
-    "searchDescription": "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in LLMs.",
-    "highlightText": "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in LLMs.",
+    "searchDescription": "Fully open-source realistic QA generation pipeline that SFT-ing on gpt-oss-20b gains an average of +4.3% absolute accuracy on 4 benchmarks: SealQA, LongBench-v2, Oolong-Synth, OfficeQA.",
+    "highlightTexts": [
+      "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in LLMs.",
+      "We published a fully open-source realistic QA generation pipeline that SFT-ing on gpt-oss-20b gains an average of +4.3% absolute accuracy on 4 benchmarks: SealQA, LongBench-v2, Oolong-Synth, OfficeQA."
+    ],
     "longDescription": "",
     "tech": ["Long-Context Reasoning", "LLMs", "SQL", "CUDA", "GPU", "vLLM", "NVIDIA H200"],
     "mediaFrames": [

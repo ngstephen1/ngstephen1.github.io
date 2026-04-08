@@ -636,9 +636,18 @@ export default function Search() {
               </div>
             )}
 
-            {!!data.highlightText && (
-              <div className="w-full rounded-lg border border-white/10 bg-dark-purple-300/30 px-4 py-3 text-base font-medium leading-8 text-white">
-                {data.highlightText}
+            {!!(data.highlightTexts?.length || data.highlightText) && (
+              <div className="w-full space-y-3">
+                {(data.highlightTexts || [data.highlightText]).map(
+                  (highlight, index) => (
+                    <div
+                      key={`${data.alias || data.title}-highlight-${index}`}
+                      className="w-full rounded-lg border border-white/10 bg-dark-purple-300/30 px-4 py-3 text-base font-medium leading-8 text-white"
+                    >
+                      {highlight}
+                    </div>
+                  ),
+                )}
               </div>
             )}
 
