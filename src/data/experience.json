@@ -40,6 +40,39 @@
     ]
   },
   {
+    "title": "Google DeepMind Research at Virginia Tech",
+    "alias": "pi-squared-research",
+    "iconSrc": "/search-img/pi-squared.png",
+    "bannerSrc": "/search-img/pi-squared.png",
+    "headline": "π^2: Structure-Originated Reasoning Data Improves Long-Context Reasoning Ability of Large Language Models",
+    "timeline": "Jan 2025 - Present",
+    "type": "research",
+    "searchDescription": "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in LLMs.",
+    "highlightText": "We study a pipeline that curates reasoning data from initial structured data for improving long-context reasoning in LLMs.",
+    "longDescription": "",
+    "tech": ["Long-Context Reasoning", "LLMs", "Structured Data", "SQL", "Python", "Research"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/pi-squared.png",
+        "alt": "π^2 curation pipeline figure",
+        "caption": "π^2 curation pipeline. We 1) collect tables from Wikipedia and expand them with new columns when the conditions are met, then for each table, 2) generate a multi-hop analytical reasoning question paired with an executable SQL query and verify the answer with an independent Python-implemented solution. Finally, we 3) produce structured analytical reasoning traces through back-translation."
+      }
+    ],
+    "links": [
+      {
+        "name": "paper",
+        "url": "articles.svg",
+        "link": "https://arxiv.org/abs/2604.05114"
+      },
+      {
+        "name": "code",
+        "url": "link-outline.svg",
+        "link": "https://github.com/vt-pi-squared/pi-squared"
+      }
+    ]
+  },
+  {
     "title": "Marriott International",
     "alias": "marriott",
     "imageAlias": "marriott",
