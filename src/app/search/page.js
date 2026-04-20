@@ -83,6 +83,8 @@ const projectStackSections = [
       "PySpark",
       "Qmetry",
       "Harness",
+      "Alibaba Cloud",
+      "Qwen",
       "Jenkins",
       "Nginx",
       "Arduino",
@@ -366,6 +368,14 @@ const workExperienceBadges = [
       {
         alt: "Harness",
         src: "https://img.shields.io/badge/Harness-3C3C3C?style=for-the-badge",
+      },
+      {
+        alt: "Alibaba Cloud",
+        src: "https://img.shields.io/badge/Alibaba%20Cloud-FF6A00?style=for-the-badge&logo=alibabacloud&logoColor=white",
+      },
+      {
+        alt: "Qwen",
+        src: "https://img.shields.io/badge/Qwen-7A4DFF?style=for-the-badge&logoColor=white",
       },
       {
         alt: "GitHub Copilot",
