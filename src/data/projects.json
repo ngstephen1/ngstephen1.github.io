@@ -74,6 +74,67 @@
     ]
   },
   {
+    "title": "Shinhan Bank AI Copilot",
+    "type": "project",
+    "alias": "lumina-shinhan",
+    "iconSrc": "/search-img/lumina-landing.png",
+    "bannerSrc": "/search-img/lumina-landing.png",
+    "headline": "Multi-agent AI copilot for Shinhan Bank",
+    "timeline": "Alibaba - Qwen AI Hackathon",
+    "searchDescription": "Built AI copilot for autonomous document processing and underwriting workflows with Qwen, Alibaba.",
+    "longDescription": "Built AI copilot for autonomous document processing and underwriting workflows with Qwen, Alibaba.",
+    "tech": ["Qwen", "Alibaba", "OCR", "Document Processing", "Underwriting", "Multi-agent Systems"],
+    "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/lumina.png",
+        "alt": "Lumina overview"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/lumina-shinhan.png",
+        "alt": "Lumina Shinhan Bank view"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/lumina-live.png",
+        "alt": "Lumina live demo"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/lumina-ocr.png",
+        "alt": "Lumina OCR flow"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/lumina-landing.png",
+        "alt": "Lumina landing page"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/lumina-stack.png",
+        "alt": "Lumina tech stack"
+      }
+    ],
+    "links": [
+      {
+        "name": "view demo",
+        "url": "link-outline.svg",
+        "link": "https://devpost.com/software/tetranova"
+      },
+      {
+        "name": "User app",
+        "url": "link-outline.svg",
+        "link": "https://lumina.trinova.it.com/"
+      },
+      {
+        "name": "Bank Admin app",
+        "url": "link-outline.svg",
+        "link": "https://lumina.trinova.it.com/admin_dashboard"
+      }
+    ]
+  },
+  {
     "title": "AI Financial Coach",
     "type": "hackathon",
     "alias": "ai-financial-coach",
