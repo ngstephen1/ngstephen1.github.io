@@ -21,6 +21,11 @@
         "type": "image",
         "src": "/search-img/research-sealqa-frame-2.png",
         "alt": "SealQA research figure 2"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/sealqa-conf.png",
+        "alt": "SealQA conference image"
       }
     ],
     "links": [
