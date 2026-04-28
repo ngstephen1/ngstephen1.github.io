@@ -32,13 +32,20 @@
     "type": "hackathon",
     "alias": "ai-hire-ai",
     "imageAlias": "aws",
+    "iconSrc": "/search-img/AWS_Winner.jpg",
+    "bannerSrc": "/search-img/AWS_Winner.jpg",
     "headline": "Multi-agent copilot that saved 120 seconds per application",
-    "timeline": "AWS Hackathon 2026",
+    "timeline": "AWS Hackathon 2026 - 13,000+ Participants",
     "searchDescription": "Built action-taking agents that auto-plan, prefill forms, and adapt end-to-end across job application flows.",
     "longDescription": "Built with AWS Bedrock, Amazon Nova, Nova Act, OpenClaw, Python, TypeScript, and Docker, AI Hire AI acted as a multi-agent copilot for job applications. The system saved roughly 120 seconds per application by running applications in parallel with agents that could plan, prefill forms, and adapt actions end to end. I also built a recruiter agent that performed automatic social screening and adjusted its behavior across recruiter platforms.",
     "tech": ["AWS Bedrock", "Amazon Nova", "Nova Act", "OpenClaw", "Python", "TypeScript", "Docker"],
     "videoEmbed": "https://www.youtube.com/embed/P7I0xYGE_fA",
     "mediaFrames": [
+      {
+        "type": "image",
+        "src": "/search-img/AWS_Winner.jpg",
+        "alt": "AI Hire AI AWS hackathon winners photo"
+      },
       {
         "type": "image",
         "src": "/search-img/ai-hire-ai-tech-stack.png",
@@ -48,6 +55,11 @@
         "type": "image",
         "src": "/search-img/ai-hire-ai-flow.png",
         "alt": "AI Hire AI flow diagram"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/aws-nova-ai-banner.png",
+        "alt": "AI Hire AI Amazon Nova AI banner"
       }
     ],
     "links": [
@@ -77,8 +89,8 @@
     "title": "Shinhan Bank AI Copilot",
     "type": "project",
     "alias": "lumina-shinhan",
-    "iconSrc": "/search-img/lumina-landing.png",
-    "bannerSrc": "/search-img/lumina-landing.png",
+    "iconSrc": "/search-img/Alibaba-Qwen-Venue.png",
+    "bannerSrc": "/search-img/Alibaba-Qwen-Venue.png",
     "headline": "Multi-agent AI copilot for Shinhan Bank",
     "timeline": "Alibaba - Qwen AI Hackathon",
     "searchDescription": "Built AI copilot for autonomous document processing and underwriting workflows with Qwen, Alibaba.",
@@ -99,11 +111,6 @@
         "type": "image",
         "src": "/search-img/lumina-live.png",
         "alt": "Lumina live demo"
-      },
-      {
-        "type": "image",
-        "src": "/search-img/lumina-ocr.png",
-        "alt": "Lumina OCR flow"
       },
       {
         "type": "image",
@@ -170,11 +177,23 @@
     "alias": "productivity-agent",
     "imageAlias": "aws",
     "headline": "Real-time productivity agent built at AWS Hackathon",
-    "timeline": "AWS Hackathon 2025",
+    "timeline": "AWS Hackathon 2025 - 9,000+ Participants",
     "searchDescription": "Built an agent that senses work across apps, creates concise work briefs, and recommends next-best actions.",
     "longDescription": "Built with Python, AWS Lambda, AWS API Gateway, Nova, Bedrock, DynamoDB, and S3, this productivity agent sensed user context across apps, turned that context into concise work briefs, and recommended next-best actions. The system integrated a Chrome extension with AWS Lambda and Bedrock and increased task resumption rate by 35% by helping users re-enter work faster.",
     "tech": ["Python", "AWS Lambda", "AWS API Gateway", "Nova", "Bedrock", "DynamoDB", "S3"],
-    "videoEmbed": "https://www.youtube.com/embed/o7Vgaxnxu34",
+    "hideHero": true,
+    "mediaFrames": [
+      {
+        "type": "embed",
+        "src": "https://www.youtube.com/embed/o7Vgaxnxu34",
+        "alt": "Productivity Agent demo video"
+      },
+      {
+        "type": "image",
+        "src": "/search-img/noro-aws-hack.png",
+        "alt": "Productivity Agent AWS Hackathon project image"
+      }
+    ],
     "links": [
       {
         "name": "video",
@@ -189,7 +208,7 @@
     "alias": "ai-medical-research-tool",
     "imageAlias": "ibm",
     "headline": "RAG app for trustworthy, page-cited medical syntheses",
-    "timeline": "IBM Challenge 2025",
+    "timeline": "10-week IBM Challenge 2025",
     "searchDescription": "Built a medical research tool using watsonx.ai Granite models and parallelized retrieval across dozens of papers.",
     "longDescription": "This RAG web app was built with Python, Flask, IBM watsonx.ai, IBM Granite, watsonx.data, and React. It generates trustworthy, page-cited medical syntheses for researchers and supports multi-document reasoning across dozens of scientific papers at once by parallelizing retrieval and context chunking through watsonx.data pipelines.",
     "tech": ["Python", "Flask", "IBM watsonx.ai", "IBM Granite", "watsonx.data", "React"],
@@ -237,18 +256,10 @@
     "alias": "noteshell",
     "iconSrc": "/search-img/yc-noteshell.png",
     "bannerSrc": "/search-img/yc-noteshell.png",
-    "headline": "Co-founder building a multimodal learning platform",
+    "headline": "Founding Engineer for Agentic Education",
     "timeline": "Present",
-    "searchDescription": "Top 10% Y Combinator Winter 2025 startup with personalized recommendations, an agentic study assistant, and an MCP tool layer.",
-    "longDescription": "At Noteshell, I co-founded a multimodal learning platform focused on making studying more adaptive and useful. We shipped personalized recommendations, an agentic study assistant, and an MCP tool layer that connected learning workflows into one product experience. The company was recognized in the Top 10% of Y Combinator Winter 2025.",
-    "tech": ["Multimodal Systems", "Agents", "MCP", "Recommendations", "Product", "Startup"],
-    "links": [
-      {
-        "name": "website",
-        "url": "link-outline.svg",
-        "link": "https://app.noteshell.io"
-      }
-    ]
+    "searchDescription": "YC soon.",
+    "tech": ["Multimodal Systems", "Agents", "MCP", "Recommendations", "Product", "Startup"]
   },
   {
     "title": "Women-first Finance Agent",
@@ -357,9 +368,9 @@
     "alias": "singing-voice-synthesis",
     "iconSrc": "/search-img/muto-banner.png",
     "bannerSrc": "/search-img/muto-banner.png",
-    "headline": "Speech model and data pipeline for AI-generated singing",
+    "headline": "Working with Google Developer Expert on speech model and data pipeline",
     "timeline": "Nov 2023 - Mar 2024",
-    "searchDescription": "Reduced per-song time by 12 hours by automating music annotation and preprocessing pipelines.",
+    "searchDescription": "Working with Google Developer Expert on speech model and data pipeline",
     "longDescription": "Built with Python, PyTorch, and TensorBoard, this project automated music annotation and preprocessing pipelines, reducing per-song preparation time by roughly 12 hours. I also implemented a speech model in PyTorch and trained it on GPU with TensorBoard, making the workflow faster and much easier to iterate on.",
     "tech": ["Python", "PyTorch", "TensorBoard", "GPU Training", "Audio Processing"],
     "mediaFrames": [

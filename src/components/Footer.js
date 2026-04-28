@@ -21,7 +21,7 @@ export default function Footer() {
             Virginia, United States
           </div>
 
-          {path === "/" && <div>Last updated: April 20, 2026</div>}
+          {path === "/" && <div>Last updated: April 28, 2026</div>}
         </div>
       </div>
 
